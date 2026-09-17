@@ -1,7 +1,6 @@
 (()=>{
 const format=window.fileFormat,d=window.fileExamples[format];if(format==='html')return;
 const heading=document.querySelector('.title_GBaV6');if(heading)heading.textContent='文件预览 · '+d.label;
-const edit=document.getElementById('wb-edit');if(edit)edit.hidden=true;
 const title=[...document.querySelectorAll('div')].find(n=>n.childElementCount===0&&n.textContent==='生成初中文言文虚词教学动画');if(title)title.textContent=d.title;
 document.title=d.title+' — 飞象老师';
 const close=document.querySelector('.closeIcon_bn4Ur');if(close){close.setAttribute('role','button');close.setAttribute('aria-label','关闭文件预览');close.tabIndex=0;close.onclick=()=>{const viewer=document.querySelector('.attachmentViewerWrapper_u7vdf');if(viewer)viewer.hidden=true;};close.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();close.click();}};}

@@ -83,16 +83,10 @@ const oldSend=document.querySelector('.send-button');const send=el('button','wb-
 const status=el('p','wb-chat-status');status.hidden=true;status.setAttribute('role','status');container.append(status);
 function updateSend(){send.disabled=!(input.textContent.trim()||refs.length);}
 input.oninput=()=>{status.hidden=true;updateSend();};send.onclick=sendMessage;input.onkeydown=e=>{if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)){e.preventDefault();send.click();}};
-const editAction=document.querySelector('.resourceActions_bph9v button');
-let action=null;
-if(editAction){
- editAction.id='wb-edit';editAction.title='编辑';editAction.setAttribute('aria-label','编辑');
- editAction.onclick=()=>{input.focus();container.scrollIntoView({block:'nearest',behavior:'smooth'});};
- action=editAction.cloneNode(false);editAction.parentElement.insertBefore(action,editAction);
-}
+const action=document.querySelector('.resourceActions_bph9v button');
 
 if(action){action.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-9 9 10 10 0 0 1-4-.9L3 21l1.4-4.7A9 9 0 1 1 21 11.5Z"/><path d="M12 8v7m-3.5-3.5h7"/></svg>';action.setAttribute('aria-label','添加注释');action.title='添加注释';action.id='wb-add-annotation';action.onclick=()=>frame.contentWindow.postMessage({type:'fx-toggle-annotation'},location.origin);}
 window.addEventListener('message',e=>{if(e.origin!==location.origin||e.source!==frame.contentWindow)return;if(e.data?.type==='fx-annotation-state'){action?.setAttribute('aria-pressed',String(e.data.active));}if(['fx-add-annotation','fx-add-annotations'].includes(e.data?.type)){const batch=e.data.type==='fx-add-annotations'?e.data.references:[e.data.reference];if(!Array.isArray(batch))return;for(const ref of batch){if(!ref||!ref.anchor||typeof ref.text!=='string')continue;const existing=refs.findIndex(r=>r.id===ref.id);if(existing<0)refs.push(ref);else refs[existing]=ref;}persist();render();input.focus();}});
-const surface=refs.at(-1)?.anchor.scope==='cover'||new URLSearchParams(location.search).get('surface')==='cover'?'cover':'quiz';frame.src=`share.html?embedded=1&surface=${window.fileFormat==='html'?surface:'cover'}&format=${window.fileFormat}&v=30`;
+const surface=refs.at(-1)?.anchor.scope==='cover'||new URLSearchParams(location.search).get('surface')==='cover'?'cover':'quiz';frame.src=`share.html?embedded=1&surface=${window.fileFormat==='html'?surface:'cover'}&format=${window.fileFormat}&v=31`;
 render();if(refs.length){input.focus();requestAnimationFrame(()=>{const chat=document.querySelector('.musk-chat-scroll-container');if(chat)chat.scrollTop=chat.scrollHeight;});}
 })();
