@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html lang="zh-CN" data-musk-theme="campus" data-musk-theme-mode="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-musk-editor-theme-style="true">
+:root {
+  --musk-foundation-color-green-25: #F8F9F7;
+  --musk-foundation-color-green-50: #F4F3EE;
+  --musk-foundation-color-green-100: #EFF4EE;
+  --musk-foundation-color-green-125: #EBF2EB;
+  --musk-foundation-color-green-150: #E1DCCC;
+  --musk-foundation-color-green-175: #DEE3E8;
+  --musk-foundation-color-green-250: #E3EDE3;
+  --musk-foundation-color-green-300: #D3EAD0;
+  --musk-foundation-color-green-325: #CBF2C7;
+  --musk-foundation-color-green-350: #E8E4DC;
+  --musk-foundation-color-green-400: #D4CBBA;
+  --musk-foundation-color-green-450: #A5C9AC;
+  --musk-foundation-color-green-500: #5E5D57;
+  --musk-foundation-color-green-525: #5D5C56;
+  --musk-foundation-color-green-550: #A9BEB0;
+  --musk-foundation-color-green-650: #677872;
+  --musk-foundation-color-green-675: #4C6154;
+  --musk-foundation-color-green-700: #080701;
+  --musk-foundation-color-green-725: #02543B;
+  --musk-foundation-color-green-800: #004737;
+  --musk-foundation-color-green-900: #102620;
+  --musk-foundation-color-neutral-0: #FFFFFF;
+  --musk-foundation-color-neutral-25: #FAFAFA;
+  --musk-foundation-color-neutral-50: #F4F3EC;
+  --musk-foundation-color-neutral-75: #F9F9F6;
+  --musk-foundation-color-neutral-125: #EBE9DF;
+  --musk-foundation-color-neutral-175: #E2DCCA;
+  --musk-v3-foundation-color-neutral-210: #EEEFEA;
+  --musk-foundation-color-neutral-225: #ECE9E0;
+  --musk-foundation-color-neutral-300: #E8E4DC;
+  --musk-foundation-color-neutral-325: #E8E8E8;
+  --musk-foundation-color-neutral-350: #E6EAE9;
+  --musk-foundation-color-neutral-375: #D2DCD3;
+  --musk-foundation-color-neutral-400: #C9DACC;
+  --musk-foundation-color-neutral-450: #C8C7C2;
+  --musk-foundation-color-neutral-500: #A9B2AF;
+  --musk-foundation-color-neutral-525: #8A8D92;
+  --musk-foundation-color-neutral-550: #99988F;
+  --musk-foundation-color-neutral-600: #819790;
+  --musk-foundation-color-neutral-800: #283934;
+  --musk-foundation-color-neutral-850: #283937;
+  --musk-foundation-color-neutral-875: #413E39;
+  --musk-foundation-color-neutral-950: #161D29;
+  --musk-foundation-color-blue-gray-900: #2A3A41;
+  --musk-foundation-color-yellow-50: #F8F0CD;
+  --musk-foundation-color-yellow-500: #FFDF5E;
+  --musk-foundation-color-yellow-800: #6B4B02;
+  --musk-foundation-color-orange-500: #FF6421;
+  --musk-foundation-color-orange-600: #FF8A5C;
+  --musk-foundation-color-red-900: #433232;
+  --musk-foundation-color-red-100: #F7DED1;
+  --musk-foundation-color-red-200: #EDD6D2;
+  --musk-foundation-color-red-300: #DEC8C7;
+  --musk-foundation-color-red-350: #B1A9A8;
+  --musk-foundation-color-red-450: #967E7E;
+  --musk-foundation-color-red-700: #782734;
+  --musk-foundation-alpha-danger-90: rgba(255, 63, 63, 0.90);
+  --musk-foundation-alpha-danger-soft-40: rgba(255, 185, 155, 0.40);
+  --musk-foundation-color-success-600: #A7DB9A;
+  --musk-foundation-color-ppt-thumb-number-bg: #90A19B;
+  --musk-foundation-color-ppt-thumb-highlight-border: #8FA099;
+  --musk-foundation-color-app-preview-version-current-dot: #82CB82;
+  --musk-foundation-color-app-preview-version-timeline-line: #C9D9CC;
+  --musk-foundation-color-app-preview-status-not-deployed-bg: #E1EDE2;
+  --musk-foundation-color-app-preview-status-deployed-bg: #D2F3CE;
+  --musk-foundation-color-app-preview-status-deployed-text: #00A342;
+  --musk-foundation-color-app-preview-status-pending-update-bg: #FFF2E3;
+  --musk-foundation-color-app-preview-tab-bar-bg: #E0DBCC;
+  --musk-foundation-color-app-preview-version-view-button-border: #DFE9DF;
+  --musk-foundation-color-app-preview-version-description: #466253;
+  --musk-v3-foundation-color-chat-artifact-create-card-bg: #E3F1E2;
+  --musk-foundation-color-chat-user-memory-card-bg: #DCF5D9;
+  --musk-foundation-color-chat-user-memory-card-header-text: #0A7117;
+  --musk-foundation-color-chat-user-memory-card-action-hover-bg: #CBEAC7;
+  --musk-foundation-color-chat-user-memory-card-primary-disabled-bg: #ABBAB5;
+  --musk-foundation-color-chat-user-memory-card-summary-text: #526A62;
+  --musk-v3-foundation-color-chat-user-fragment-icon-muted: #99ACA5;
+  --musk-v3-foundation-color-chat-draft-file-card-pill-text: #87908D;
+  --musk-v3-foundation-color-chat-draft-file-card-pill-icon: #141F1B;
+  --musk-foundation-color-black: #000000;
+  --musk-foundation-color-transparent: transparent;
+  --musk-foundation-color-skeleton-user-bg: #EDE6D8;
+  --musk-foundation-color-skeleton-assistant-bg: #F0ECE4;
+  --musk-foundation-color-skeleton-input-bg: #E6EDEA;
+  --musk-foundation-alpha-black-12: rgba(0, 0, 0, 0.10);
+  --musk-foundation-alpha-black-24: rgba(0, 0, 0, 0.30);
+  --musk-foundation-alpha-black-50: rgba(0, 0, 0, 0.50);
+  --musk-foundation-alpha-white-60: rgba(255, 255, 255, 0.60);
+  --musk-foundation-alpha-neutral-20: rgba(8, 7, 1, 0.20);
+  --musk-v3-foundation-alpha-green-700-8: rgba(8, 7, 1, 0.08);
+  --musk-foundation-alpha-neutral-400-20: rgba(201, 218, 204, 0.20);
+  --musk-foundation-alpha-neutral-400-70: rgba(201, 218, 204, 0.70);
+  --musk-foundation-gradient-mask-surface: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 36%);
+  --musk-foundation-gradient-mask-ai: linear-gradient(180deg, rgba(244, 243, 238, 0) 0%, #F4F3EE 36%);
+  --musk-foundation-gradient-mask-analysis: linear-gradient(179.99998deg, #E3F1E2 0%, rgba(227, 241, 226, 0.00) 100%);
+  --musk-foundation-gradient-mask-diagnosis: linear-gradient(180deg, rgba(250, 244, 219, 0) 0%, #FAF4DB 36%);
+  --musk-foundation-gradient-sidebar-item-hover-fade: linear-gradient(270deg, #E3EDE3 0%, rgba(227, 237, 227, 0.00) 100%);
+  --musk-foundation-gradient-sidebar-item-active-fade: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.00) 100%);
+  --musk-foundation-shadow-card: 0 4px 12px rgba(8, 7, 1, 0.08);
+  --musk-foundation-shadow-card-subtle: 0 4px 32px rgba(8, 7, 1, 0.08);
+  --musk-foundation-shadow-popup: 0 4px 16px rgba(0, 0, 0, 0.10);
+  --musk-foundation-shadow-sidebar-popover: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --musk-foundation-shadow-sidebar-action-menu: 0 4px 16px rgba(76, 97, 84, 0.12);
+  --musk-v3-component-modal-text: initial;
+  --musk-v3-component-modal-confirm-content-text: var(--musk-semantic-chat-text-strong);
+  --musk-v3-component-chat-interaction-publish-input-count: var(--musk-semantic-chat-text-tertiary);
+  --musk-v3-component-content-picker-body-bg: var(--musk-foundation-color-green-25);
+  --musk-v3-component-content-picker-text-tertiary: var(--musk-semantic-chat-text-tertiary);
+  --musk-v3-component-content-picker-secondary-hover-bg: var(--musk-semantic-chat-btn-secondary-hover-bg);
+  --musk-v3-component-html-preview-secondary-hover-bg: var(--musk-chat-artifact-secondary-action-hover-bg);
+  --musk-v3-component-html-preview-toolbar-secondary-action-hover-bg: var(--musk-chat-html-edit-tab-bg);
+  --musk-v3-component-html-preview-toolbar-save-button-bg: var(--musk-semantic-chat-btn-primary-bg);
+  --musk-v3-component-html-preview-toolbar-save-button-border: var(--musk-semantic-chat-preview-card-border);
+  --musk-v3-component-html-preview-toolbar-save-button-text: var(--musk-semantic-chat-btn-primary-text);
+  --musk-v3-component-html-preview-toolbar-save-button-hover-bg: var(--musk-semantic-chat-btn-primary-hover-bg);
+  --musk-v3-component-html-preview-toolbar-save-button-disabled-bg: var(--musk-semantic-chat-btn-primary-disabled-bg);
+  --musk-v3-component-optimize-dialog-input-bg: var(--musk-foundation-color-green-25);
+  --musk-v3-component-optimize-dialog-input-border: var(--musk-semantic-chat-border-subtle);
+  --musk-v3-component-optimize-dialog-placeholder: var(--musk-semantic-chat-text-tertiary);
+  --musk-v3-component-ppt-optimize-overlay-bg: rgba(0, 0, 0, 0.30);
+  --musk-v3-component-ppt-optimize-thumb-overlay-bg: rgba(201, 218, 204, 0.20);
+  --musk-v3-component-ppt-optimize-thumb-spinner-color: #A5C9AC;
+  --musk-v3-component-ppt-preview-bg: #F8F9F7;
+  --musk-v3-component-ppt-play-button-bg: #D3EAD0;
+  --musk-v3-component-ppt-play-button-border: #A5C9AC;
+  --musk-v3-component-ppt-play-button-text: #080701;
+  --musk-v3-component-ppt-thumb-sidebar-inner-border: #D4CBBA;
+  --musk-v3-component-ppt-thumb-number-bg: #90A19B;
+  --musk-v3-component-ppt-thumb-default-border-color: #D4CBBA;
+  --musk-v3-component-ppt-thumb-highlight-border-color: #8FA099;
+  --musk-v3-component-ppt-thumb-active-color: #080701;
+  --musk-v3-component-ppt-optimize-button-bg: #EBE9DF;
+  --musk-v3-component-ppt-optimize-button-border: #080701;
+  --musk-v3-component-ppt-optimize-button-text: #2A3A41;
+  --musk-v3-component-ppt-optimize-button-hover-bg: #EBE9DF;
+  --musk-chat-dislike-reason-title: var(--musk-semantic-chat-text-primary);
+  --musk-chat-dislike-reason-close-icon-fill: var(--musk-semantic-chat-icon-secondary);
+  --musk-chat-dislike-reason-border: var(--musk-semantic-chat-border-subtle);
+  --musk-chat-dislike-reason-option-border: var(--musk-semantic-chat-border-subtle);
+  --musk-chat-dislike-reason-option-text: var(--musk-semantic-chat-text-secondary);
+  --musk-chat-dislike-reason-option-bg: var(--musk-foundation-color-neutral-225);
+  --musk-chat-dislike-reason-option-selected-text: var(--musk-foundation-color-blue-gray-950);
+  --musk-chat-dislike-reason-input-bg: var(--musk-semantic-chat-surface-subtle-bg);
+  --musk-chat-dislike-reason-input-text: var(--musk-semantic-chat-text-primary);
+  --musk-chat-dislike-reason-input-placeholder: var(--musk-semantic-chat-text-disabled-strong);
+  --musk-chat-dislike-reason-scrollbar-thumb: var(--musk-semantic-chat-divider-default);
+  --musk-chat-dislike-reason-submit-bg: var(--musk-semantic-chat-btn-primary-bg);
+  --musk-chat-dislike-reason-submit-hover-bg: var(--musk-semantic-chat-btn-primary-hover-bg);
+  --musk-chat-dislike-reason-submit-active-bg: var(--musk-semantic-chat-btn-primary-active-bg);
+  --musk-chat-dislike-reason-submit-disabled-bg: var(--musk-semantic-chat-btn-primary-disabled-bg);
+  --musk-chat-dislike-reason-submit-text: var(--musk-semantic-chat-btn-primary-text);
+  --musk-chat-like-dislike-normal-icon: var(--musk-semantic-chat-text-secondary);
+  --musk-chat-like-dislike-active-icon: var(--musk-semantic-chat-brand-solid);
+  --musk-chat-like-dislike-active-mark: var(--musk-semantic-chat-brand-solid);
+  --musk-chat-like-dislike-divider: var(--musk-semantic-chat-divider-default);
+  --musk-chat-standard-reading-card-bg: var(--musk-semantic-chat-reading-bg);
+  --musk-chat-standard-reading-card-text: var(--musk-chat-analysis-title);
+  --musk-chat-standard-reading-card-tag-bg: var(--musk-semantic-chat-surface-bg);
+  --musk-chat-standard-reading-card-tag-text: var(--musk-chat-analysis-title);
+  --musk-chat-standard-reading-card-tag-icon-accent: var(--musk-foundation-color-blue-300);
+  --musk-chat-standard-reading-card-tag-icon-contrast: var(--musk-foundation-color-neutral-0);
+  --musk-chat-standard-reading-card-line: var(--musk-semantic-chat-reading-line);
+  --musk-chat-standard-reading-card-item-icon-bg: var(--musk-foundation-color-blue-300);
+  --musk-chat-standard-reading-card-item-icon-mark: var(--musk-foundation-color-neutral-0);
+  --musk-chat-standard-reading-card-mask: var(--musk-semantic-chat-reading-mask);
+  --musk-chat-standard-reading-card-expand-text: var(--musk-chat-analysis-title);
+  --musk-chat-standard-reading-card-expand-icon: var(--musk-chat-analysis-title);
+  --musk-chat-task-bg: var(--musk-foundation-color-neutral-0);
+  --musk-chat-task-line: var(--musk-semantic-chat-task-line);
+  --musk-chat-task-muted-text: var(--musk-semantic-chat-task-muted-text);
+  --musk-chat-task-text: var(--musk-semantic-chat-text-primary);
+  --musk-semantic-chat-diagnosis-bg: var(--musk-foundation-color-yellow-50);
+  --musk-semantic-chat-diagnosis-accent: var(--musk-foundation-color-yellow-800);
+  --musk-semantic-chat-diagnosis-mask: var(--musk-foundation-gradient-mask-diagnosis);
+  --musk-chat-diagnosis-mask: var(--musk-semantic-chat-diagnosis-mask);
+  --musk-v3-component-chat-detection-card-border: transparent;
+  --musk-v3-component-chat-detection-card-border-width: 0px;
+  --musk-v3-component-chat-detection-card-radius: var(--musk-chat-message-card-radius);
+  --musk-v3-component-chat-detection-card-tag-shadow-color: transparent;
+  --musk-v3-component-chat-detection-card-tag-icon-accent: var(--musk-foundation-color-yellow-800);
+  --musk-v3-component-chat-detection-card-tag-icon-contrast: var(--musk-foundation-color-yellow-500);
+  --musk-v3-component-chat-detection-card-result-text: var(--musk-semantic-chat-text-primary);
+  --musk-v3-component-chat-detection-card-line: var(--musk-semantic-chat-text-primary);
+  --musk-v3-component-chat-detection-card-status-icon-bg: var(--musk-foundation-color-neutral-850);
+  --musk-v3-component-chat-detection-card-status-icon-mark: var(--musk-foundation-color-neutral-850);
+  --musk-v3-component-chat-detection-card-data-icon: var(--musk-foundation-color-neutral-800);
+  --musk-v3-component-chat-sidebar-waiting-icon-bg: var(--musk-semantic-chat-btn-danger-bg);
+  --musk-v3-component-chat-sidebar-waiting-blink-bg: var(--musk-foundation-alpha-danger-soft-40);
+  --musk-chat-analysis-bg: var(--musk-semantic-chat-analysis-bg);
+  --musk-chat-analysis-border: transparent;
+  --musk-chat-analysis-tag-bg: var(--musk-semantic-chat-analysis-tag-bg);
+  --musk-chat-analysis-tag-text: var(--musk-semantic-chat-analysis-accent);
+  --musk-chat-analysis-tag-icon-accent: var(--musk-foundation-color-success-600);
+  --musk-chat-analysis-tag-shadow: transparent;
+  --musk-chat-analysis-accent: var(--musk-semantic-chat-analysis-accent);
+  --musk-chat-analysis-line: var(--musk-semantic-chat-analysis-line);
+  --musk-chat-analysis-title: var(--musk-semantic-chat-analysis-title);
+  --musk-chat-analysis-mask: var(--musk-semantic-chat-analysis-mask);
+  --musk-v3-component-chat-app-preview-loading-track-bg: var(--musk-foundation-color-green-250);
+  --musk-v3-component-chat-app-preview-loading-fill-bg: var(--musk-foundation-color-green-725);
+  --musk-v3-component-chat-app-preview-loading-text: var(--musk-foundation-color-neutral-600);
+  --musk-v3-component-chat-app-preview-toolbar-bg: var(--musk-foundation-color-app-preview-tab-bar-bg);
+  --musk-v3-component-chat-app-preview-tab-border: var(--musk-foundation-color-transparent);
+  --musk-v3-component-chat-app-preview-tab-text: var(--musk-foundation-color-green-700);
+  --musk-v3-component-chat-app-preview-tab-hover-bg: var(--musk-foundation-color-transparent);
+  --musk-v3-component-chat-app-preview-deploy-button-border: var(--musk-foundation-color-green-400);
+  --musk-v3-component-chat-app-preview-version-title: var(--musk-foundation-color-neutral-800);
+  --musk-v3-component-chat-app-preview-version-description: var(--musk-foundation-color-app-preview-version-description);
+  --musk-v3-component-chat-app-preview-version-hover-bg: var(--musk-foundation-color-green-25);
+  --musk-v3-component-chat-app-preview-version-current-dot-fill: var(--musk-foundation-color-app-preview-version-current-dot);
+  --musk-v3-component-chat-app-preview-version-current-dot-border: var(--musk-foundation-alpha-black-24);
+  --musk-v3-component-chat-app-preview-version-default-dot-border: var(--musk-foundation-alpha-black-24);
+  --musk-v3-component-chat-app-preview-version-timeline-line: var(--musk-foundation-color-app-preview-version-timeline-line);
+  --musk-v3-component-chat-app-preview-version-deploy-tag-bg: var(--musk-foundation-color-app-preview-status-not-deployed-bg);
+  --musk-v3-component-chat-app-preview-version-deploy-tag-text: var(--musk-foundation-color-green-725);
+  --musk-v3-component-chat-app-preview-version-view-button-text: var(--musk-foundation-color-black);
+  --musk-v3-component-chat-app-preview-version-view-button-border: var(--musk-foundation-color-app-preview-version-view-button-border);
+  --musk-v3-component-chat-app-preview-version-view-button-hover-bg: var(--musk-foundation-color-green-125);
+  --musk-v3-component-chat-app-preview-deploy-input-border: var(--musk-chat-modal-border);
+  --musk-v3-component-chat-app-preview-deploy-control-text: var(--musk-chat-modal-title);
+  --musk-v3-component-chat-app-preview-deploy-option-hover-bg: var(--musk-chat-modal-input-bg);
+  --musk-v3-component-chat-app-preview-deploy-option-selected-bg: var(--musk-chat-modal-input-bg);
+  --musk-v3-component-chat-app-preview-deploy-description-text: var(--musk-foundation-color-green-500);
+  --musk-v3-component-chat-app-preview-deploy-time-text: var(--musk-chat-modal-text);
+  --musk-v3-component-chat-app-preview-deploy-domain-bg: var(--musk-chat-modal-input-bg);
+  --musk-v3-component-chat-app-preview-deploy-domain-icon: var(--musk-chat-modal-text);
+  --musk-v3-component-chat-app-preview-deploy-domain-text: var(--musk-chat-modal-text);
+  --musk-v3-component-chat-app-preview-deploy-status-not-deployed-bg: var(--musk-foundation-color-app-preview-status-not-deployed-bg);
+  --musk-v3-component-chat-app-preview-deploy-status-not-deployed-text: var(--musk-foundation-color-neutral-600);
+  --musk-v3-component-chat-app-preview-deploy-status-deployed-bg: var(--musk-foundation-color-app-preview-status-deployed-bg);
+  --musk-v3-component-chat-app-preview-deploy-status-deployed-text: var(--musk-foundation-color-app-preview-status-deployed-text);
+  --musk-v3-component-chat-app-preview-deploy-status-pending-update-bg: var(--musk-foundation-color-app-preview-status-pending-update-bg);
+  --musk-v3-component-chat-app-preview-deploy-status-pending-update-text: var(--musk-foundation-color-orange-500);
+  --musk-v3-component-chat-user-memory-card-bg: var(--musk-foundation-color-chat-user-memory-card-bg);
+  --musk-v3-component-chat-user-memory-card-text: var(--musk-foundation-color-neutral-800);
+  --musk-v3-component-chat-user-memory-card-header-bg: var(--musk-foundation-color-neutral-0);
+  --musk-v3-component-chat-user-memory-card-header-text: var(--musk-foundation-color-chat-user-memory-card-header-text);
+  --musk-v3-component-chat-user-memory-card-action-hover-bg: var(--musk-foundation-color-chat-user-memory-card-action-hover-bg);
+  --musk-v3-component-chat-user-memory-card-primary-action-bg: var(--musk-foundation-color-green-725);
+  --musk-v3-component-chat-user-memory-card-primary-action-disabled-bg: var(--musk-foundation-color-chat-user-memory-card-primary-disabled-bg);
+  --musk-v3-component-chat-user-memory-card-primary-action-text: var(--musk-foundation-color-neutral-0);
+  --musk-v3-component-chat-user-memory-card-action-divider: var(--musk-foundation-alpha-black-12);
+  --musk-v3-component-chat-user-memory-card-summary-text: var(--musk-foundation-color-chat-user-memory-card-summary-text);
+  --musk-v3-component-chat-user-memory-card-editor-caret: var(--musk-foundation-color-green-725);
+  --musk-v3-component-chat-user-memory-card-editor-count: var(--musk-foundation-color-chat-user-memory-card-primary-disabled-bg);
+  --musk-v3-component-ppt-onboarding-card-bg: var(--musk-chat-action-tooltip-bg);
+  --musk-v3-component-ppt-onboarding-card-shadow-color: transparent;
+  --musk-v3-component-ppt-onboarding-title: #C8C7C2;
+  --musk-v3-component-ppt-onboarding-description: var(--musk-foundation-color-neutral-0);
+  --musk-v3-component-ppt-onboarding-step: #C8C7C2;
+  --musk-v3-component-ppt-onboarding-preview-bg: #F8F8F8;
+  --musk-v3-component-ppt-onboarding-button-bg: #F4F3EE;
+  --musk-v3-component-ppt-onboarding-button-hover-bg: #F4F3EE;
+  --musk-v3-component-ppt-onboarding-button-text: #080701;
+  --musk-v3-component-ppt-onboarding-badge-bg: #FF6421;
+  --musk-v3-component-checkbox-checked-mark: var(--musk-semantic-chat-brand-solid);
+  --musk-chat-skeleton-canvas-bg: var(--musk-foundation-color-green-50);
+  --musk-chat-skeleton-user-bg: var(--musk-foundation-color-skeleton-user-bg);
+  --musk-chat-skeleton-assistant-bg: var(--musk-foundation-color-skeleton-assistant-bg);
+  --musk-chat-skeleton-input-bg: var(--musk-foundation-color-skeleton-input-bg);
+  --musk-chat-message-user-bg: var(--musk-foundation-color-green-650);
+  --musk-semantic-chat-canvas-bg: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-panel-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-surface-subtle-bg: var(--musk-foundation-color-neutral-75);
+  --musk-semantic-chat-surface-selected-bg: var(--musk-foundation-color-neutral-225);
+  --musk-chat-modal-input-bg: var(--musk-foundation-color-neutral-75);
+  --musk-chat-action-border: var(--musk-foundation-color-neutral-225);
+  --musk-chat-action-hover-bg: var(--musk-foundation-color-neutral-125);
+  --musk-chat-action-tooltip-bg: var(--musk-foundation-color-green-700);
+  --musk-chat-action-tooltip-highlight: var(--musk-foundation-color-transparent);
+  --musk-chat-action-text: var(--musk-foundation-color-green-500);
+  --musk-chat-ai-tips-color: var(--musk-foundation-color-green-350);
+  --musk-semantic-chat-surface-hover-bg: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-surface-disabled-bg: var(--musk-foundation-color-neutral-450);
+  --musk-semantic-chat-skeleton-assistant-bg: var(--musk-foundation-color-skeleton-assistant-bg);
+  --musk-semantic-chat-skeleton-input-bg: var(--musk-foundation-color-skeleton-input-bg);
+  --musk-semantic-chat-border-subtle: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-divider-default: var(--musk-foundation-color-green-400);
+  --musk-semantic-chat-text-primary: #2A3A41;
+  --musk-semantic-chat-text-strong: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-text-secondary: var(--musk-foundation-color-green-500);
+  --musk-semantic-chat-text-tertiary: var(--musk-foundation-color-green-500);
+  --musk-semantic-chat-text-disabled: #C8C7C2;
+  --musk-semantic-chat-artifact-disabled-text: var(--musk-foundation-color-neutral-450);
+  --musk-semantic-chat-btn-secondary-disabled-border: var(--musk-foundation-color-neutral-300);
+  --musk-semantic-chat-icon-default: var(--musk-semantic-chat-text-primary);
+  --musk-semantic-chat-icon-secondary: var(--musk-semantic-chat-text-secondary);
+  --musk-semantic-chat-icon-disabled: var(--musk-semantic-chat-text-disabled);
+  --musk-semantic-chat-icon-inverse: var(--musk-foundation-color-neutral-0);
+  --musk-semantic-chat-brand-solid: #080701;
+  --musk-semantic-chat-brand-soft-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-interaction-hover-bg: #E2DCCA;
+  --musk-semantic-chat-interaction-active-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-editor-panel-border: var(--musk-foundation-color-green-400);
+  --musk-semantic-chat-editor-control-text: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-editor-panel-text: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-editor-control-hover-bg: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-editor-control-active-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-editor-tooltip-bg: var(--musk-foundation-color-blue-gray-900);
+  --musk-semantic-chat-editor-primary-bg: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-editor-primary-weak-bg: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-editor-primary-disabled-bg: var(--musk-foundation-color-neutral-450);
+  --musk-semantic-chat-editor-ai-icon-bg: var(--musk-foundation-color-green-150);
+  --musk-semantic-chat-editor-ai-icon-fg: var(--musk-foundation-color-blue-gray-900);
+  --musk-semantic-chat-editor-text-hover-bg: var(--musk-semantic-chat-surface-selected-bg);
+  --musk-semantic-chat-editor-text-hover-border: var(--musk-semantic-chat-brand-solid);
+  --musk-semantic-chat-editor-text-active-border: var(--musk-semantic-chat-brand-solid);
+  --musk-semantic-chat-editor-element-hover-bg: var(--musk-semantic-chat-surface-hover-bg);
+  --musk-semantic-chat-editor-element-hover-border: var(--musk-semantic-chat-editor-panel-border);
+  --musk-semantic-chat-editor-element-active-bg: var(--musk-semantic-chat-surface-selected-bg);
+  --musk-semantic-chat-editor-element-active-border: var(--musk-semantic-chat-brand-solid);
+  --musk-chat-editor-panel-border: #D4CBBA;
+  --musk-chat-editor-control-text: #080701;
+  --musk-chat-editor-panel-text: #080701;
+  --musk-chat-editor-control-hover-bg: #F4F3EE;
+  --musk-chat-editor-control-active-bg: #ECE9E0;
+  --musk-chat-editor-tooltip-bg: #2A3A41;
+  --musk-chat-editor-primary-bg: #080701;
+  --musk-chat-editor-primary-weak-bg: #080701;
+  --musk-chat-editor-primary-disabled-bg: #C8C7C2;
+  --musk-chat-editor-ai-icon-bg: #E1DCCC;
+  --musk-chat-editor-ai-icon-fg: #2A3A41;
+  --musk-chat-editor-text-hover-bg: #ECE9E0;
+  --musk-chat-editor-text-hover-border: #080701;
+  --musk-chat-editor-text-active-border: #080701;
+  --musk-chat-editor-element-hover-bg: #F4F3EE;
+  --musk-chat-editor-element-hover-border: #D4CBBA;
+  --musk-chat-editor-element-active-bg: #ECE9E0;
+  --musk-chat-editor-element-active-border: #080701;
+  --musk-v3-component-editor-toolbar-bg: #FFFFFF;
+  --musk-v3-component-editor-toolbar-border: #D4CBBA;
+  --musk-v3-component-editor-toolbar-shadow: 0px 2px 16px 0px rgba(77, 81, 77, 0.06);
+  --musk-v3-component-editor-ai-toolbar-bg: #F5F6F7;
+  --musk-v3-component-editor-ai-toolbar-border: transparent;
+  --musk-v3-component-editor-ai-toolbar-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  --musk-v3-component-editor-toolbar-control-bg: transparent;
+  --musk-v3-component-editor-toolbar-control-hover-bg: #F4F3EE;
+  --musk-v3-component-editor-toolbar-control-active-bg: #ECE9E0;
+  --musk-v3-component-editor-toolbar-control-text: #080701;
+  --musk-v3-component-editor-toolbar-ai-icon-bg: #E1DCCC;
+  --musk-v3-component-editor-toolbar-ai-icon-fg: #2A3A41;
+  --musk-v3-component-editor-selection-border: #080701;
+  --musk-v3-component-editor-toolbar-panel-text: #080701;
+  --musk-v3-component-editor-toolbar-placeholder: #C8C7C2;
+  --musk-v3-component-editor-toolbar-primary-bg: #080701;
+  --musk-v3-component-editor-toolbar-primary-hover-bg: #080701;
+  --musk-v3-component-editor-toolbar-primary-disabled-bg: #C8C7C2;
+  --musk-v3-component-editor-toolbar-primary-text: #FFFFFF;
+  --musk-v3-component-editor-toolbar-replace-disabled-text: #C8C7C2;
+  --musk-v3-component-editor-toolbar-replace-disabled-opacity: 0.4;
+  --musk-v3-component-editor-result-card-bg: #FFFFFF;
+  --musk-v3-component-editor-result-card-border: #D4CBBA;
+  --musk-v3-component-editor-result-card-text: #080701;
+  --musk-v3-component-editor-result-card-divider: #F2F3F5;
+  --musk-v3-component-editor-result-card-action-text: #080701;
+  --musk-v3-component-editor-result-card-action-hover-bg: #F4F3EE;
+  --musk-v3-component-editor-result-card-action-bg: #FFFFFF;
+  --musk-v3-component-editor-result-card-action-border: #E8E8E8;
+  --musk-v3-component-editor-result-card-action-primary-bg: #080701;
+  --musk-v3-component-editor-result-card-action-primary-hover-bg: #080701;
+  --musk-v3-component-editor-result-card-action-primary-text: #FFFFFF;
+  --musk-semantic-chat-overlay-mask: var(--musk-foundation-alpha-black-24);
+  --musk-semantic-chat-user-bg: var(--musk-foundation-color-green-500);
+  --musk-semantic-chat-ai-text-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-ai-text: var(--musk-foundation-color-green-700);
+  --musk-chat-ai-text-card-bg: var(--musk-foundation-color-neutral-225);
+  --musk-chat-ai-text-card-link: var(--musk-foundation-color-blue-300);
+  --musk-v3-component-chat-ai-markdown-link-color: var(--musk-foundation-color-blue-300);
+  --musk-v3-component-chat-ai-markdown-link-hover-color: var(--musk-foundation-color-blue-300);
+  --musk-v3-component-chat-ai-markdown-table-border: var(--musk-foundation-color-green-400);
+  --musk-v3-component-chat-ai-markdown-table-header-bg: var(--musk-foundation-color-green-150);
+  --musk-v3-component-chat-ai-markdown-table-row-bg: var(--musk-foundation-color-green-50);
+  --musk-v3-component-chat-ai-markdown-table-header-text: var(--musk-foundation-color-green-700);
+  --musk-v3-component-chat-ai-markdown-table-text: var(--musk-foundation-color-green-700);
+  --musk-chat-ai-table-border: var(--musk-foundation-color-green-400);
+  --musk-chat-ai-table-header-bg: var(--musk-foundation-color-green-150);
+  --musk-chat-ai-table-row-bg: var(--musk-foundation-color-green-50);
+  --musk-chat-ai-table-header-text: var(--musk-foundation-color-green-700);
+  --musk-chat-ai-table-text: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-ai-table-header-bg: var(--musk-foundation-color-green-150);
+  --musk-semantic-chat-ai-table-row-bg: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-resource-hover-bg: var(--musk-foundation-color-neutral-0);
+  --musk-semantic-chat-resource-border: var(--musk-foundation-color-green-400);
+  --musk-semantic-chat-resource-title: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-resource-action-bg: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-resource-action-hover-bg: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-resource-action-text: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-resource-action-disabled-text: var(--musk-foundation-alpha-neutral-20);
+  --musk-semantic-chat-resource-ghost-action-hover-bg: var(--musk-foundation-color-neutral-75);
+  --musk-semantic-chat-resource-ghost-action-text: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-resource-ghost-action-disabled-text: var(--musk-foundation-alpha-neutral-20);
+  --musk-chat-resource-delivery-card-bg: var(--musk-semantic-chat-resource-bg);
+  --musk-chat-resource-delivery-card-border: var(--musk-semantic-chat-resource-border);
+  --musk-chat-resource-delivery-card-text: var(--musk-semantic-chat-resource-title);
+  --musk-chat-resource-delivery-card-secondary-action-bg: var(--musk-semantic-chat-resource-action-bg);
+  --musk-chat-resource-delivery-card-secondary-action-hover-bg: var(--musk-semantic-chat-resource-action-hover-bg);
+  --musk-chat-resource-delivery-card-secondary-action-border: var(--musk-semantic-chat-resource-border);
+  --musk-chat-resource-delivery-card-secondary-action-text: var(--musk-semantic-chat-resource-action-text);
+  --musk-chat-resource-delivery-card-primary-action-bg: var(--musk-semantic-chat-brand-solid);
+  --musk-chat-resource-delivery-card-primary-action-hover-bg: var(--musk-semantic-chat-brand-hover);
+  --musk-chat-resource-delivery-card-primary-action-text: var(--musk-semantic-chat-text-inverse);
+  --musk-chat-resource-delivery-card-view-icon: var(--musk-semantic-chat-resource-action-text);
+  --musk-chat-resource-delivery-card-download-icon: var(--musk-semantic-chat-text-inverse);
+  --musk-semantic-chat-file-item-bg: var(--musk-foundation-color-neutral-75);
+  --musk-semantic-chat-file-bg: var(--musk-foundation-color-neutral-0);
+  --musk-semantic-chat-file-sunken-bg: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-file-border: var(--musk-foundation-color-neutral-300);
+  --musk-semantic-chat-file-selected-border: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-file-title: var(--musk-foundation-color-green-700);
+  --musk-chat-artifact-file-card-bg: var(--musk-semantic-chat-file-bg);
+  --musk-chat-artifact-file-card-border: var(--musk-foundation-color-transparent);
+  --musk-chat-artifact-file-card-border-width: 0px;
+  --musk-chat-artifact-file-card-radius: var(--musk-semantic-chat-radius-md);
+  --musk-chat-artifact-file-card-mobile-border-width: 0px;
+  --musk-chat-artifact-file-card-mobile-radius: 0.14rem;
+  --musk-chat-artifact-file-card-text: var(--musk-semantic-chat-text-primary);
+  --musk-chat-artifact-file-card-divider: var(--musk-semantic-chat-artifact-divider);
+  --musk-chat-artifact-file-card-icon-primary: var(--musk-foundation-color-neutral-850);
+  --musk-chat-artifact-file-card-icon-contrast: var(--musk-foundation-color-green-250);
+  --musk-chat-artifact-file-card-expand-text: var(--musk-semantic-chat-text-primary);
+  --musk-chat-artifact-file-card-expand-icon: var(--musk-foundation-color-neutral-850);
+  --musk-chat-artifact-publish-border: var(--musk-semantic-chat-artifact-publish-border);
+  --musk-chat-network-search-card-bg: var(--musk-semantic-chat-info-bg);
+  --musk-chat-network-search-card-tag-bg: var(--musk-semantic-chat-surface-bg);
+  --musk-chat-network-search-card-text: var(--musk-semantic-chat-info-text-strong);
+  --musk-chat-network-search-card-line: var(--musk-semantic-chat-info-line);
+  --musk-chat-network-search-card-pill-bg: var(--musk-semantic-chat-info-pill-bg);
+  --musk-chat-network-search-card-pill-hover-bg: rgba(0, 0, 0, 0.06);
+  --musk-chat-network-search-card-tag-icon-bg: var(--musk-foundation-color-neutral-0);
+  --musk-chat-network-search-card-tag-icon-accent: var(--musk-foundation-color-purple-800);
+  --musk-chat-network-search-card-complete-icon-bg: var(--musk-foundation-color-purple-300);
+  --musk-chat-network-search-card-complete-icon-mark: var(--musk-foundation-color-neutral-0);
+  --musk-chat-network-search-card-link-icon: var(--musk-foundation-color-purple-900);
+  --musk-chat-network-search-card-mask: var(--musk-semantic-chat-info-mask);
+  --musk-semantic-chat-ask-bg: #F8EBE4;
+  --musk-semantic-chat-ask-text-secondary: var(--musk-foundation-color-red-900);
+  --musk-chat-ask-bg: var(--musk-semantic-chat-ask-bg);
+  --musk-chat-ask-text: var(--musk-foundation-color-red-900);
+  --musk-chat-ask-text-secondary: var(--musk-semantic-chat-ask-text-secondary);
+  --musk-chat-ask-text-tertiary: var(--musk-foundation-color-red-450);
+  --musk-chat-ask-accent: var(--musk-foundation-color-red-700);
+  --musk-chat-ask-accent-hover: var(--musk-foundation-color-red-700);
+  --musk-chat-ask-tag-bg: var(--musk-foundation-color-neutral-0);
+  --musk-chat-ask-tag-icon-accent: var(--musk-foundation-color-red-700);
+  --musk-chat-ask-tag-icon-contrast: #FFD4C3;
+  --musk-chat-ask-input-bg: var(--musk-foundation-alpha-white-60);
+  --musk-chat-ask-input-active-bg: var(--musk-foundation-color-neutral-0);
+  --musk-chat-ask-placeholder: var(--musk-foundation-color-red-350);
+  --musk-chat-ask-custom-input-placeholder: var(--musk-chat-ask-placeholder);
+  --musk-chat-ask-option-hover-border: var(--musk-foundation-color-red-200);
+  --musk-chat-ask-choice-unselected-color: var(--musk-chat-ask-option-hover-border);
+  --musk-chat-ask-choice-unselected-opacity: 1;
+  --musk-chat-ask-custom-icon-color: var(--musk-chat-ask-text);
+  --musk-chat-ask-weak-control-bg: var(--musk-foundation-color-red-100);
+  --musk-chat-ask-disabled-control-bg: var(--musk-foundation-color-red-300);
+  --musk-chat-ask-border: transparent;
+  --musk-chat-ask-radius: var(--musk-semantic-chat-radius-md);
+  --musk-chat-ask-tag-icon-size: 16px;
+  --musk-semantic-chat-analysis-bg: #E3F1E2;
+  --musk-semantic-chat-analysis-tag-bg: var(--musk-foundation-color-green-300);
+  --musk-semantic-chat-analysis-accent: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-process-tag-border: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-process-text: var(--musk-foundation-color-blue-gray-900);
+  --musk-chat-process-delivery-card-bg: var(--musk-semantic-chat-process-bg);
+  --musk-chat-process-delivery-card-text: var(--musk-semantic-chat-process-text);
+  --musk-chat-process-delivery-card-link: var(--musk-foundation-color-blue-300);
+  --musk-chat-process-delivery-card-table-border: var(--musk-foundation-color-green-400);
+  --musk-chat-process-delivery-card-table-header-bg: var(--musk-foundation-color-green-150);
+  --musk-chat-process-delivery-card-table-row-bg: var(--musk-foundation-color-green-50);
+  --musk-chat-process-delivery-card-table-header-text: var(--musk-foundation-color-green-700);
+  --musk-chat-process-delivery-card-table-text: var(--musk-foundation-color-green-700);
+  --musk-chat-process-delivery-card-mask: var(--musk-semantic-chat-process-mask);
+  --musk-semantic-chat-task-muted-text: var(--musk-foundation-color-neutral-550);
+  --musk-semantic-chat-artifact-create-bg: var(--musk-v3-foundation-color-chat-artifact-create-card-bg);
+  --musk-semantic-chat-artifact-divider: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-artifact-primary-action-bg: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-artifact-secondary-action-bg: transparent;
+  --musk-semantic-chat-artifact-secondary-action-border: #D4CBBA;
+  --musk-semantic-chat-artifact-secondary-action-hover-bg: #ECE9E0;
+  --musk-semantic-chat-artifact-publish-border: var(--musk-foundation-color-transparent);
+  --musk-chat-artifact-secondary-action-bg: transparent;
+  --musk-chat-artifact-secondary-action-border: #D4CBBA;
+  --musk-chat-artifact-secondary-action-hover-bg: #ECE9E0;
+  --musk-v3-component-chat-user-fragment-bg: var(--musk-semantic-chat-user-fragment-bg);
+  --musk-v3-component-chat-user-fragment-icon-contrast: var(--musk-foundation-color-neutral-0);
+  --musk-v3-component-chat-user-fragment-icon-muted: var(--musk-v3-foundation-color-chat-user-fragment-icon-muted);
+  --musk-v3-component-chat-user-fragment-border-width: 1px;
+  --musk-v3-component-chat-user-fragment-radius: 6px;
+  --musk-v3-component-chat-draft-file-card-pill-bg: var(--musk-foundation-color-neutral-0);
+  --musk-v3-component-chat-draft-file-card-pill-border: var(--musk-foundation-color-transparent);
+  --musk-v3-component-chat-draft-file-card-pill-border-width: 0px;
+  --musk-v3-component-chat-draft-file-card-pill-text: var(--musk-v3-foundation-color-chat-draft-file-card-pill-text);
+  --musk-v3-component-chat-draft-file-card-pill-icon: var(--musk-v3-foundation-color-chat-draft-file-card-pill-icon);
+  --musk-v3-component-chat-artifact-create-card-bg: var(--musk-semantic-chat-artifact-create-bg);
+  --musk-v3-component-chat-artifact-create-card-border: var(--musk-foundation-color-transparent);
+  --musk-v3-component-chat-artifact-create-card-text: var(--musk-semantic-chat-text-primary);
+  --musk-v3-component-chat-artifact-create-card-tag-bg: var(--musk-semantic-chat-artifact-create-tag-bg);
+  --musk-v3-component-chat-artifact-create-card-tag-icon-color: var(--musk-foundation-color-success-600);
+  --musk-v3-component-chat-artifact-create-card-tag-shadow-color: var(--musk-v3-foundation-alpha-green-700-8);
+  --musk-v3-component-chat-artifact-create-card-item-icon-bg: var(--musk-foundation-color-success-600);
+  --musk-v3-component-chat-artifact-create-card-item-icon-mark: var(--musk-foundation-color-neutral-0);
+  --musk-v3-component-chat-artifact-create-card-line: var(--musk-semantic-chat-analysis-line);
+  --musk-v3-component-chat-artifact-create-card-collapse-bg: var(--musk-foundation-color-transparent);
+  --musk-v3-component-chat-artifact-create-card-collapse-text: var(--musk-semantic-chat-text-primary);
+  --musk-v3-component-chat-artifact-create-card-collapse-icon: var(--musk-semantic-chat-icon-default);
+  --musk-chat-publish-artifact-card-bg: var(--musk-semantic-chat-artifact-publish-bg);
+  --musk-chat-publish-artifact-card-border: var(--musk-semantic-chat-artifact-publish-border);
+  --musk-chat-publish-artifact-card-text: var(--musk-semantic-chat-text-primary);
+  --musk-chat-publish-artifact-card-text-tertiary: var(--musk-semantic-chat-text-tertiary);
+  --musk-chat-publish-artifact-card-divider: var(--musk-semantic-chat-artifact-divider);
+  --musk-chat-publish-artifact-card-primary-action-bg: var(--musk-semantic-chat-artifact-primary-action-bg);
+  --musk-chat-publish-artifact-card-primary-action-hover-bg: var(--musk-semantic-chat-brand-hover);
+  --musk-chat-publish-artifact-card-primary-action-text: var(--musk-semantic-chat-text-inverse);
+  --musk-chat-publish-artifact-card-secondary-action-bg: var(--musk-semantic-chat-artifact-secondary-action-bg);
+  --musk-chat-publish-artifact-card-secondary-action-hover-bg: var(--musk-semantic-chat-artifact-secondary-action-hover-bg);
+  --musk-chat-publish-artifact-card-secondary-action-border: var(--musk-semantic-chat-artifact-secondary-action-border);
+  --musk-chat-publish-artifact-card-secondary-action-text: var(--musk-semantic-chat-text-primary);
+  --musk-chat-publish-artifact-card-disabled-bg: var(--musk-semantic-chat-artifact-disabled-bg);
+  --musk-chat-publish-artifact-card-disabled-text: var(--musk-semantic-chat-artifact-disabled-text);
+  --musk-chat-publish-artifact-card-default-icon-border: var(--musk-foundation-color-neutral-200);
+  --musk-chat-publish-artifact-card-default-icon-bg: var(--musk-foundation-color-neutral-0);
+  --musk-chat-publish-artifact-card-default-icon-primary: var(--musk-foundation-color-green-725);
+  --musk-chat-publish-artifact-card-default-icon-secondary: var(--musk-foundation-color-success-600);
+  --musk-chat-publish-artifact-card-view-icon: var(--musk-semantic-chat-text-primary);
+  --musk-chat-publish-artifact-card-deploy-icon: var(--musk-semantic-chat-text-inverse);
+  --musk-semantic-chat-input-shell-border: var(--musk-foundation-color-neutral-300);
+  --musk-semantic-chat-input-shell-shadow: var(--musk-foundation-shadow-card-subtle);
+  --musk-semantic-chat-input-text: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-input-caret: #080701;
+  --musk-semantic-chat-input-placeholder: #C8C7C2;
+  --musk-semantic-chat-input-scrollbar-thumb: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-input-upload-icon: var(--musk-foundation-color-green-525);
+  --musk-semantic-chat-input-upload-trigger-border: var(--musk-foundation-color-neutral-300);
+  --musk-semantic-chat-input-voice-icon: var(--musk-foundation-color-green-525);
+  --musk-semantic-chat-scrollbar-thumb: var(--musk-foundation-color-green-150);
+  --musk-v3-component-chat-dialog-left-scrollbar-thumb: var(--musk-semantic-chat-scrollbar-thumb);
+  --musk-semantic-chat-input-footer-icon-hover-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-input-voice-active-bg: var(--musk-semantic-chat-surface-subtle-bg);
+  --musk-v3-semantic-chat-input-option-hover-bg: var(--musk-foundation-color-neutral-75);
+  --musk-v3-semantic-chat-input-action-border: var(--musk-foundation-color-neutral-225);
+  --musk-v3-semantic-chat-input-upload-card-bg: var(--musk-semantic-chat-brand-soft-bg);
+  --musk-v3-semantic-chat-input-upload-card-hover-bg: var(--musk-semantic-chat-input-footer-icon-hover-bg);
+  --musk-semantic-chat-input-send-loading-bg: var(--musk-foundation-color-neutral-450);
+  --musk-v3-component-chat-home-input-shell-bg: var(--musk-foundation-color-neutral-0);
+  --musk-v3-component-chat-home-bottom-input-shell-border: var(--musk-foundation-color-neutral-400);
+  --musk-v3-component-chat-home-bottom-input-shell-radius: 20px;
+  --musk-v3-component-chat-home-top-input-shell-border: var(--musk-foundation-alpha-neutral-400-70);
+  --musk-v3-component-chat-home-top-input-shell-radius: 20px;
+  --musk-v3-component-chat-dialog-input-shell-bg: var(--musk-semantic-chat-surface-subtle-bg);
+  --musk-v3-component-chat-dialog-input-shell-border: var(--musk-semantic-chat-input-shell-border);
+  --musk-v3-component-chat-dialog-input-shell-hover-shadow: none;
+  --musk-v3-component-chat-dialog-input-shell-radius: 20px;
+  --musk-v3-component-chat-tip-message-text: var(--musk-semantic-chat-brand-solid);
+  --musk-v3-component-chat-tip-message-complete-icon: var(--musk-foundation-color-success-600);
+  --musk-v3-component-chat-tip-message-running-icon: var(--musk-foundation-color-yellow-500);
+  --musk-v3-component-chat-file-drag-overlay-bg: var(--background-overlay);
+  --musk-v3-component-chat-file-drag-overlay-icon: var(--musk-foundation-color-green-725);
+  --musk-v3-component-chat-file-drag-overlay-title: var(--musk-foundation-color-green-725);
+  --musk-v3-component-chat-file-drag-overlay-description: var(--musk-v3-foundation-color-chat-draft-file-card-pill-text);
+  --musk-v3-component-chat-input-control-icon: var(--musk-foundation-color-green-525);
+  --musk-v3-component-chat-input-menu-border: var(--musk-foundation-color-green-175);
+  --musk-v3-component-chat-input-menu-shadow: var(--musk-foundation-shadow-popup);
+  --musk-v3-component-chat-input-tag-text: var(--musk-foundation-color-green-675);
+  --musk-v3-component-chat-input-upload-card-border-style: dashed;
+  --musk-v3-component-chat-input-attachment-card-bg: var(--musk-semantic-chat-file-item-bg);
+  --musk-v3-component-chat-input-attachment-card-border: transparent;
+  --musk-v3-component-chat-input-attachment-card-title: var(--musk-foundation-color-green-700);
+  --musk-v3-component-chat-input-attachment-card-meta: var(--musk-foundation-color-neutral-525);
+  --musk-v3-component-uploaded-file-list-delete-icon-hover-bg: transparent;
+  --musk-v3-component-chat-input-selected-tag-bg: var(--musk-foundation-color-green-50);
+  --musk-v3-component-chat-input-selected-tag-hover-bg: var(--musk-foundation-color-green-50);
+  --musk-v3-component-chat-input-selected-tag-border: var(--musk-foundation-gradient-sidebar-item-hover-fade);
+  --musk-v3-component-chat-input-selected-tag-text: var(--musk-foundation-color-green-800);
+  --musk-v3-component-chat-input-education-app-selected-tag-bg: var(--musk-foundation-color-green-50);
+  --musk-v3-component-chat-input-education-app-selected-tag-hover-bg: var(--musk-foundation-color-green-50);
+  --musk-v3-component-chat-input-education-app-selected-tag-border: var(--musk-foundation-gradient-sidebar-item-hover-fade);
+  --musk-v3-component-chat-input-selected-tag-close-icon: var(--musk-semantic-chat-brand-solid);
+  --musk-v3-component-chat-input-send-button-bg: var(--musk-foundation-color-green-50);
+  --musk-v3-component-chat-input-send-button-hover-bg: var(--musk-semantic-chat-btn-primary-hover-bg);
+  --musk-v3-component-chat-input-send-button-disabled-bg: var(--musk-foundation-color-neutral-450);
+  --musk-v3-component-chat-input-send-button-stop-bg: var(--musk-semantic-chat-brand-solid);
+  --musk-v3-component-chat-input-send-button-loading-bg: var(--musk-foundation-color-neutral-450);
+  --musk-v3-component-chat-input-send-button-icon: var(--musk-foundation-color-neutral-0);
+  --musk-v3-component-chat-input-send-button-upload-pending-bg: var(--musk-foundation-color-green-500);
+  --musk-v3-component-chat-input-suggestion-accept-bg: var(--musk-semantic-chat-brand-soft-bg);
+  --musk-v3-component-chat-input-suggestion-accept-text: var(--musk-semantic-chat-text-secondary);
+  --musk-v3-component-chat-input-suggestion-accept-hover-bg: var(--musk-foundation-color-green-250);
+  --musk-v3-component-chat-input-suggestion-accept-hover-text: var(--musk-semantic-chat-text-secondary);
+  --musk-v3-component-chat-preview-file-card-download-hover-bg: var(--musk-semantic-chat-interaction-hover-bg);
+  --musk-semantic-chat-preview-card-border: var(--musk-foundation-color-green-400);
+  --musk-semantic-chat-preview-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-preview-edit-bg: var(--musk-foundation-color-neutral-50);
+  --musk-semantic-chat-preview-content-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-preview-progress-track: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-preview-progress-fill: var(--musk-foundation-color-green-500);
+  --musk-semantic-chat-modal-title: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-modal-text: var(--musk-foundation-color-green-500);
+  --musk-semantic-chat-modal-mask: var(--musk-foundation-alpha-black-24);
+  --musk-semantic-chat-modal-input-border: var(--musk-foundation-color-green-400);
+  --musk-semantic-chat-publish-tag-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-publish-primary-btn-bg: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-deploy-success-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-btn-primary-bg: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-btn-primary-hover-bg: var(--musk-foundation-color-green-500);
+  --musk-semantic-chat-btn-primary-active-bg: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-btn-primary-disabled-bg: var(--musk-foundation-color-neutral-450);
+  --musk-semantic-chat-btn-primary-text: var(--musk-foundation-color-neutral-0);
+  --musk-semantic-chat-btn-secondary-border: var(--musk-foundation-color-green-400);
+  --musk-semantic-chat-btn-secondary-hover-bg: var(--musk-foundation-color-neutral-225);
+  --musk-semantic-chat-btn-secondary-active-bg: var(--musk-foundation-color-green-50);
+  --musk-semantic-chat-btn-secondary-disabled-text: var(--musk-foundation-color-neutral-450);
+  --musk-semantic-chat-btn-secondary-text: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-btn-danger-bg: var(--musk-foundation-color-orange-500);
+  --musk-semantic-chat-error-text: var(--musk-foundation-color-orange-500);
+  --musk-semantic-chat-markdown-heading: var(--musk-foundation-color-green-700);
+  --musk-semantic-chat-markdown-table-header-bg: var(--musk-foundation-color-green-50);
+  --musk-chat-content-header-title: var(--musk-foundation-color-green-700);
+  --musk-chat-content-header-status-bg: var(--musk-semantic-chat-surface-subtle-bg);
+  --musk-chat-content-header-status-text: var(--musk-semantic-chat-text-tertiary);
+  --musk-chat-content-header-action-hover-bg: var(--musk-semantic-chat-resource-ghost-action-hover-bg);
+  --musk-chat-content-header-action-hover: var(--musk-semantic-chat-resource-ghost-action-text);
+  --musk-chat-content-header-action-disabled: var(--musk-semantic-chat-resource-ghost-action-disabled-text);
+  --musk-chat-attachment-header-title: var(--musk-foundation-color-green-700);
+  --musk-chat-attachment-resource-title: var(--musk-foundation-color-green-700);
+  --musk-v3-component-chat-share-popup-bg: var(--musk-foundation-color-green-25);
+  --musk-v3-component-chat-share-popup-shadow: var(--musk-foundation-shadow-sidebar-action-menu);
+  --musk-v3-component-chat-share-popup-border: var(--musk-foundation-color-neutral-400);
+  --musk-v3-component-chat-share-popup-text: var(--musk-foundation-color-green-675);
+  --musk-v3-component-chat-share-popup-hover-bg: var(--musk-foundation-color-green-125);
+  --musk-v3-component-chat-share-popup-divider: var(--musk-foundation-color-neutral-400);
+  --musk-chat-dislike-reason-bg-color: #fff;
+  --musk-chat-regenerate-color: var(--musk-foundation-color-green-500);
+  --musk-chat-html-edit-tab-bg: #EBE9DF;
+  --musk-chat-html-edit-tab-border-color: var(--musk-foundation-color-green-400);
+  --musk-chat-app-preview-tab-bg: var(--musk-foundation-color-neutral-0);
+}
+</style><script data-musk-preview-runtime-reporter="true" src="https://static-nginx-online.fbcontent.cn/musk-workbench-web-static/editor/musk-preview-runtime-reporter.js?v=1.0.0"></script>
+<meta http-equiv="Content-Security-Policy" content="img-src &#39;self&#39; data: blob: https://*.fbcontent.cn https://*.aliyuncs.com https://storage.googleapis.com; media-src &#39;self&#39; data: blob: https://*.fbcontent.cn https://*.aliyuncs.com https://storage.googleapis.com;">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>虚词入境：文言语感互动问答</title>
+  <style>
+    :root {
+      --canvas: #EFE8D9;
+      --surface: #FFFFFF;
+      --surface-alt: #F4F0E7;
+      --ink: #504735;
+      --ink-muted: #7A7365;
+      --primary: #612B24;
+      --primary-deep: #5C3329;
+      --highlight: #E3BC83;
+      --attention: #C5533C;
+      --positive: #6F7F52;
+      --border: #D5D3CF;
+      --shadow: 0 14px 34px rgba(80, 71, 53, 0.11);
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(227,188,131,.22), transparent 28%),
+        linear-gradient(135deg, rgba(255,255,255,.28), transparent 36%),
+        var(--canvas);
+      font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+    }
+
+    button { font: inherit; }
+    button:focus-visible { outline: 3px solid rgba(97,43,36,.35); outline-offset: 3px; }
+
+    .app-shell { width: 100%; min-height: 100vh; padding: 28px clamp(18px, 4vw, 64px) 46px; }
+    .topbar {
+      max-width: 1220px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 14px;
+      letter-spacing: .22em;
+      font-weight: 700;
+    }
+    h1 { margin: 0; font-size: clamp(30px, 4vw, 54px); line-height: 1.08; letter-spacing: .03em; color: var(--primary); }
+    .subtitle { margin: 10px 0 0; color: var(--ink-muted); font-size: clamp(14px, 1.6vw, 18px); line-height: 1.7; }
+    .top-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; padding-top: 24px; }
+
+    .btn {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 11px 16px;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+      font-weight: 700;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-deep); }
+    .btn-secondary { background: var(--surface-alt); color: var(--ink); }
+    .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+    .btn:disabled { cursor: not-allowed; opacity: .54; transform: none; }
+
+    .main-grid { max-width: 1220px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(280px, .75fr); gap: 20px; align-items: start; }
+    .panel { background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .progress-panel { padding: 16px 18px; border-radius: var(--radius); }
+    .progress-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 14px; }
+    .progress-label { color: var(--primary); font-weight: 700; }
+    .progress-value { color: var(--ink-muted); }
+    .progress-track { height: 10px; margin-top: 11px; background: var(--surface-alt); border-radius: 999px; overflow: hidden; }
+    .progress-fill { width: 0%; height: 100%; background: linear-gradient(90deg, var(--primary), var(--highlight)); transition: width .35s ease; }
+
+    .question-card { margin-top: 16px; border-radius: 0; overflow: hidden; }
+    .question-head { padding: clamp(22px, 4vw, 38px); background: var(--surface-alt); border-bottom: 1px solid var(--border); }
+    .question-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-bottom: 18px; }
+    .number-badge { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 12px; background: var(--primary); color: #fff; border-radius: 999px; font-size: 14px; font-weight: 700; }
+    .type-badge, .focus-badge { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; color: var(--ink-muted); background: var(--surface); font-size: 14px; }
+    .focus-badge { color: var(--primary); border-color: rgba(97,43,36,.25); background: rgba(227,188,131,.28); font-weight: 700; }
+    .question-prompt { margin: 0; font-size: clamp(20px, 2.5vw, 31px); line-height: 1.55; color: var(--ink); }
+    .question-note { margin: 13px 0 0; color: var(--ink-muted); font-size: 15px; line-height: 1.7; }
+
+    .passage { margin: 22px 0 0; padding: 19px 22px; background: var(--surface); border-left: 5px solid var(--highlight); color: var(--primary-deep); font-size: clamp(20px, 2.5vw, 30px); line-height: 1.9; letter-spacing: .04em; }
+    .passage mark { padding: 0 5px; color: var(--primary); background: linear-gradient(transparent 55%, rgba(227,188,131,.8) 55%); font-weight: 700; }
+    .passage .second-line { display: block; margin-top: 8px; color: var(--ink-muted); font-size: .55em; line-height: 1.7; letter-spacing: 0; }
+
+    .answer-area { padding: clamp(22px, 4vw, 38px); }
+    .answer-tip { margin: 0 0 15px; color: var(--ink-muted); font-size: 15px; line-height: 1.7; }
+    .options { display: grid; gap: 12px; }
+    .option {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 13px;
+      width: 100%;
+      text-align: left;
+      padding: 15px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+    }
+    .option:hover { border-color: var(--primary); background: #fffaf0; transform: translateX(2px); }
+    .option-key { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--surface-alt); color: var(--primary); font-weight: 700; }
+    .option-text { align-self: center; line-height: 1.6; font-size: 17px; }
+    .option.correct { border-color: var(--positive); background: rgba(111,127,82,.12); }
+    .option.correct .option-key { background: var(--positive); color: #fff; }
+    .option.wrong { border-color: var(--attention); background: rgba(197,83,60,.1); }
+    .option.wrong .option-key { background: var(--attention); color: #fff; }
+    .option:disabled { cursor: default; transform: none; }
+
+    .feedback { display: none; margin-top: 18px; padding: 18px 20px; border: 1px solid var(--border); background: var(--surface-alt); }
+    .feedback.show { display: block; animation: rise .28s ease both; }
+    .feedback-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .feedback-title { margin: 0; font-size: 21px; color: var(--primary); }
+    .feedback-title.is-wrong { color: var(--attention); }
+    .feedback-score { color: var(--ink-muted); font-size: 14px; }
+    .feedback p { margin: 10px 0 0; line-height: 1.8; }
+    .feedback .cue { color: var(--primary); font-weight: 700; }
+    .answer-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+
+    .side { display: grid; gap: 16px; }
+    .side-card { padding: 20px; border-radius: var(--radius); }
+    .side-card h2 { margin: 0 0 13px; color: var(--primary); font-size: 19px; }
+    .side-card p { margin: 0; color: var(--ink-muted); line-height: 1.75; font-size: 15px; }
+    .rule-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .rule-list li { display: grid; grid-template-columns: 28px 1fr; gap: 9px; align-items: start; font-size: 15px; line-height: 1.65; }
+    .rule-list li::before { content: ""; width: 20px; height: 20px; margin-top: 3px; border: 1px solid var(--highlight); border-radius: 50%; background: rgba(227,188,131,.35); }
+    .word-cloud { display: flex; gap: 8px; flex-wrap: wrap; }
+    .word-chip { padding: 6px 10px; border: 1px solid var(--border); background: var(--surface-alt); color: var(--ink-muted); font-size: 14px; }
+    .word-chip.active { border-color: var(--primary); color: var(--primary); background: rgba(227,188,131,.28); font-weight: 700; }
+
+    .result { display: none; max-width: 1220px; margin: 20px auto 0; }
+    .result.show { display: block; animation: rise .32s ease both; }
+    .result-card { padding: clamp(24px, 4vw, 42px); border-radius: 0; }
+    .result-kicker { color: var(--primary); letter-spacing: .16em; font-weight: 700; font-size: 14px; }
+    .result h2 { margin: 10px 0 8px; color: var(--primary); font-size: clamp(28px, 4vw, 44px); }
+    .result-summary { color: var(--ink-muted); line-height: 1.8; }
+    .result-stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin: 22px 0; }
+    .stat { padding: 16px; background: var(--surface-alt); border: 1px solid var(--border); }
+    .stat strong { display: block; color: var(--primary); font-size: 28px; }
+    .stat span { color: var(--ink-muted); font-size: 14px; }
+    .review-list { display: grid; gap: 11px; margin-top: 15px; }
+    .review-item { padding: 15px 16px; border-left: 4px solid var(--attention); background: #fffaf6; }
+    .review-item strong { color: var(--primary); }
+    .review-item p { margin: 5px 0 0; line-height: 1.7; font-size: 15px; }
+    .result-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @keyframes rise { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 900px) {
+      .topbar { flex-direction: column; }
+      .top-actions { padding-top: 0; justify-content: flex-start; }
+      .main-grid { grid-template-columns: 1fr; }
+      .side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 600px) {
+      .app-shell { padding: 20px 13px 34px; }
+      .side { grid-template-columns: 1fr; }
+      .result-stats { grid-template-columns: 1fr; }
+      .option { grid-template-columns: 32px minmax(0,1fr); padding: 13px; }
+      .option-text { font-size: 16px; }
+      .passage { padding: 15px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">初中文言文 · 语境辨析</p>
+        <h1>虚词入境</h1>
+        <p class="subtitle">先读语境，再凭句意判断虚词。把“会背”变成“会读”，在18次小练习中培养文言语感。</p>
+      </div>
+      <div class="top-actions">
+        <button class="btn btn-secondary" id="restartTop" type="button">重新开始</button>
+        <button class="btn btn-secondary" id="reviewTop" type="button">查看错题</button>
+      </div>
+    </header>
+
+    <section class="main-grid" id="quizArea" aria-live="polite">
+      <div>
+        <section class="panel progress-panel" aria-label="答题进度">
+          <div class="progress-row"><span class="progress-label" id="progressText">第 1 / 18 题</span><span class="progress-value" id="scoreText">当前得分 0</span></div>
+          <div class="progress-track"><div class="progress-fill" id="progressFill" style="width: 0%;"></div></div>
+        </section>
+
+        <section class="panel question-card">
+          <div class="question-head">
+            <div class="question-meta">
+              <span class="number-badge" id="questionNumber">第1题</span>
+              <span class="type-badge" id="questionType">语境释义</span>
+              <span class="focus-badge" id="questionFocus">虚词：之</span>
+            </div>
+            <h2 class="question-prompt" id="questionPrompt">“之”在句中起什么作用？</h2>
+            <p class="question-note" id="questionNote">不要急着把它都译成“的”，先看它连接的成分。</p>
+            <div class="passage" id="passage">予独爱莲<mark>之</mark>出淤泥而不染。<span class="second-line">——《爱莲说》</span></div>
+          </div>
+          <div class="answer-area">
+            <p class="answer-tip" id="answerTip">读一读上下文，选择最贴合整句意思的一项。</p>
+            <div class="options" id="options"><button class="option" type="button" data-index="0"><span class="option-key">A</span><span class="option-text">结构助词“的”</span></button><button class="option" type="button" data-index="1"><span class="option-key">B</span><span class="option-text">用于主谓之间，取消句子独立性</span></button><button class="option" type="button" data-index="2"><span class="option-key">C</span><span class="option-text">宾语前置的标志</span></button><button class="option" type="button" data-index="3"><span class="option-key">D</span><span class="option-text">代词，指莲花</span></button></div>
+            <div class="feedback" id="feedback" role="status">
+              <div class="feedback-head">
+                <h3 class="feedback-title" id="feedbackTitle"></h3>
+                <span class="feedback-score" id="feedbackScore"></span>
+              </div>
+              <p id="feedbackBody"></p>
+              <p><span class="cue">语感线索：</span><span id="feedbackCue"></span></p>
+              <div class="answer-actions"><button class="btn btn-primary" id="nextBtn" type="button">下一题</button></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="side">
+        <section class="panel side-card">
+          <h2>三步读法</h2>
+          <ul class="rule-list">
+            <li>先看虚词前后，判断它连接的是名词、动词还是分句。</li>
+            <li>再把选项代回原句，读一遍整句意思。</li>
+            <li>最后看语气：转折、承接、反问、判断，往往藏在节奏里。</li>
+          </ul>
+        </section>
+        <section class="panel side-card">
+          <h2>本轮词谱</h2>
+          <div class="word-cloud" id="wordCloud"><span class="word-chip active" data-word="之">之</span><span class="word-chip" data-word="其">其</span><span class="word-chip" data-word="而">而</span><span class="word-chip" data-word="以">以</span><span class="word-chip" data-word="于">于</span><span class="word-chip" data-word="为">为</span><span class="word-chip" data-word="者">者</span><span class="word-chip" data-word="也">也</span><span class="word-chip" data-word="则">则</span><span class="word-chip" data-word="乃">乃</span><span class="word-chip" data-word="且">且</span><span class="word-chip" data-word="若">若</span><span class="word-chip" data-word="因">因</span><span class="word-chip" data-word="焉">焉</span><span class="word-chip" data-word="矣">矣</span><span class="word-chip" data-word="乎">乎</span><span class="word-chip" data-word="盖">盖</span><span class="word-chip" data-word="何">何</span></div>
+        </section>
+        <section class="panel side-card">
+          <h2>课堂提示</h2>
+          <p>教师带领时，可先让学生默读10秒，再请不同小组说出“为什么”，不要只报选项字母。</p>
+        </section>
+      </aside>
+    </section>
+
+    <section class="result" id="resultArea">
+      <div class="panel result-card">
+        <div class="result-kicker">本轮语感小结</div>
+        <h2 id="resultTitle">完成练习</h2>
+        <p class="result-summary" id="resultSummary"></p>
+        <div class="result-stats">
+          <div class="stat"><strong id="finalScore">0</strong><span>答对题数</span></div>
+          <div class="stat"><strong id="accuracy">0%</strong><span>本轮正确率</span></div>
+          <div class="stat"><strong id="weakWord">—</strong><span>优先复习</span></div>
+        </div>
+        <div id="reviewBlock"></div>
+        <div class="result-actions">
+          <button class="btn btn-primary" id="retryBtn" type="button">再练一次</button>
+          <button class="btn btn-secondary" id="wrongOnlyBtn" type="button">只练错题</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const questionBank = [
+      { word: '之', type: '语境释义', prompt: '“之”在句中起什么作用？', note: '不要急着把它都译成“的”，先看它连接的成分。', passage: '予独爱莲<mark>之</mark>出淤泥而不染。<span class="second-line">——《爱莲说》</span>', options: ['结构助词“的”', '用于主谓之间，取消句子独立性', '宾语前置的标志', '代词，指莲花'], answer: 1, explanation: '“莲出淤泥而不染”本来可以独立成句，加“之”后成为“爱”的宾语，翻译时通常不单独译出。', cue: '“莲”是主语，“出淤泥而不染”是谓语，整体作“爱”的对象。' },
+      { word: '其', type: '语境释义', prompt: '“其”在连续反问中表达了怎样的语气？', note: '把句子读出声，注意第二个“其”前后的语气变化。', passage: '<mark>其</mark>真无马邪？<mark>其</mark>真不知马也！<span class="second-line">——《马说》</span>', options: ['表示推测，大概', '表示反问，难道', '代词，指千里马', '表示选择，还是'], answer: 1, explanation: '“其真无马邪”是反问句，可译为“难道真的没有千里马吗”，第二个“其”与“邪”一起形成反问语气。', cue: '看到“邪”这样的句末语气词，先尝试用“难道……吗”读一遍。' },
+      { word: '而', type: '用法辨析', prompt: '两句中的“而”用法是否相同？', note: '比较前后两个分句的关系，而不是只看“而”字本身。', passage: '①人不知<mark>而</mark>不愠。<br>②溪深<mark>而</mark>鱼肥。<span class="second-line">——《〈论语〉十二章》、苏轼《记承天寺夜游》化用练习</span>', options: ['相同，都表转折', '相同，都表并列', '不同：①表转折，②表并列', '不同：①表承接，②表转折'], answer: 2, explanation: '①“别人不了解我”与“我不生气”形成转折；②“溪深”与“鱼肥”是并列描写。', cue: '把“而”换成“但是”或“并且”分别试读，哪一种更顺，关系就更接近哪一类。' },
+      { word: '以', type: '句意理解', prompt: '结合前后文，“以”最接近哪一个意思？', note: '先找出“其境过清”与“不可久居”的因果关系。', passage: '<mark>以</mark>其境过清，不可久居，乃记之而去。<span class="second-line">——柳宗元《小石潭记》</span>', options: ['把、拿', '因为、由于', '来、用来', '认为'], answer: 1, explanation: '“因为这里的环境太清冷，不能久留”，前后是因果关系。', cue: '后句是结果“不可久居”，前句自然承担“原因”。' },
+      { word: '于', type: '语境释义', prompt: '“美于徐公”的“于”表示什么关系？', note: '把“美于徐公”换成现代汉语，比较级关系会很明显。', passage: '皆以美<mark>于</mark>徐公。<span class="second-line">——《邹忌讽齐王纳谏》</span>', options: ['在', '向、对', '比', '由于'], answer: 2, explanation: '“美于徐公”就是“比徐公美”，“于”引出比较对象。', cue: '“于”后面接“徐公”，前面有“美”，常可译为“比”。' },
+      { word: '为', type: '语境释义', prompt: '“不足为外人道也”的“为”应该怎样理解？', note: '注意“道”的对象是谁。', passage: '此中人语云：“不足<mark>为</mark>外人道也。”<span class="second-line">——陶渊明《桃花源记》</span>', options: ['向、对', '被', '做、成为', '因为'], answer: 0, explanation: '“不足为外人道”意为“不值得向外面的人说起”，“为”引出对象。', cue: '“道”是“说”的意思，谁是说话对象？“为”就指向谁。' },
+      { word: '者', type: '结构辨析', prompt: '“望之蔚然而深秀者，琅琊也”中的“者”有什么作用？', note: '留意“者……也”的句式。', passage: '望之蔚然而深秀<mark>者</mark>，琅琊也。<span class="second-line">——欧阳修《醉翁亭记》</span>', options: ['与“也”组成判断句，指“……的地方/事物”', '表转折，相当于“却”', '表示时间，相当于“的时候”', '代词，指山'], answer: 0, explanation: '“者……也”是判断句式，“望之蔚然而深秀者”可理解为“远远看去树木茂盛、幽深秀丽的地方”。', cue: '看到“者……也”，先把前面的描述整体圈出来，再判断“是什么”。' },
+      { word: '也', type: '语气辨析', prompt: '“陈胜者，阳城人也”的“也”表达什么？', note: '这不是感叹，也不是疑问，而是在给人物下定义。', passage: '陈胜者，阳城人<mark>也</mark>。<span class="second-line">——《陈涉世家》</span>', options: ['表判断，相当于“是”', '表感叹，相当于“啊”', '表疑问，相当于“吗”', '表祈使，相当于“吧”'], answer: 0, explanation: '“陈胜是阳城人”，句末“也”帮助构成判断语气。', cue: '如果整句能顺畅改成“X是Y”，句末“也”多半带有判断色彩。' },
+      { word: '则', type: '句意理解', prompt: '“学而不思则罔，思而不学则殆”中的两个“则”怎样理解？', note: '读出两组“如果……就……”的条件结果。', passage: '学而不思<mark>则</mark>罔，思而不学<mark>则</mark>殆。<span class="second-line">——《〈论语〉十二章》</span>', options: ['都表转折，相当于“却”', '都表承接，相当于“于是”', '都表条件结果，相当于“就”', '第一个表判断，第二个表反问'], answer: 2, explanation: '“只学习却不思考就会迷惑，只思考却不学习就会疑惑”，两个“则”都引出结果。', cue: '前面是条件，后面是结果，“则”常可用“就”来检验。' },
+      { word: '乃', type: '语境释义', prompt: '“乃不知有汉”的“乃”带有怎样的意味？', note: '这是桃花源人听到外界朝代后的意外反应。', passage: '<mark>乃</mark>不知有汉，无论魏晋。<span class="second-line">——陶渊明《桃花源记》</span>', options: ['才', '竟然、却', '于是', '就是'], answer: 1, explanation: '桃花源人与世隔绝，竟然连汉朝都不知道，所以“乃”带有出乎意料的意味。', cue: '和“不知有汉”搭配时，读成“竟然不知道汉朝”，语气最顺。' },
+      { word: '且', type: '语境释义', prompt: '“年且九十”的“且”表示什么？', note: '“九十”是年龄，想想“将近”与它的搭配。', passage: '北山愚公者，年<mark>且</mark>九十。<span class="second-line">——《愚公移山》</span>', options: ['并且', '尚且', '将近', '而且'], answer: 2, explanation: '“年且九十”是“年龄将近九十岁”，这里“且”表示接近某个数量。', cue: '“且”放在数量词前，常有“将近、快要”的意思。' },
+      { word: '若', type: '语境释义', prompt: '“若为佣耕，何富贵也”的“若”指谁？', note: '注意说话人是在对同伴进行反问。', passage: '<mark>若</mark>为佣耕，何富贵也？<span class="second-line">——《陈涉世家》</span>', options: ['如果', '你', '像、如同', '他'], answer: 1, explanation: '陈涉对同伴说：“你如果只是个被雇来耕田的人，哪里来的富贵呢？”“若”是第二人称代词“你”。', cue: '后面紧接“为佣耕”，前面省略的主语就是对话中的“你”。' },
+      { word: '因', type: '语境释义', prompt: '“因势象形”的“因”体现了怎样的动作？', note: '“象形”是按照形状来雕刻。', passage: '<mark>因</mark>势象形，各具情态。<span class="second-line">——魏学洢《核舟记》</span>', options: ['因为', '于是', '顺着、按照', '趁机'], answer: 2, explanation: '雕刻者顺着事物原有的形势来模拟形状，所以“因”是“顺着、按照”。', cue: '后面的“象形”说明前面要表达“依据什么来做”。' },
+      { word: '焉', type: '语境释义', prompt: '“必有我师焉”的“焉”最接近什么？', note: '把它放回“三人同行”的场景中理解。', passage: '三人行，必有我师<mark>焉</mark>。<span class="second-line">——《〈论语〉十二章》</span>', options: ['哪里', '怎么', '于此、在其中', '语气词，不译'], answer: 2, explanation: '三个人一起走，其中一定有可以做我老师的人，“焉”相当于“于此、在其中”。', cue: '它回答的是“在哪里有我师”，不是单纯停顿。' },
+      { word: '矣', type: '语气辨析', prompt: '“可以为师矣”的“矣”主要表现什么语气？', note: '结果已经达到，句子有“了”的意味。', passage: '温故而知新，可以为师<mark>矣</mark>。<span class="second-line">——《〈论语〉十二章》</span>', options: ['表示疑问，相当于“吗”', '表示已然或感叹，相当于“了”', '表示假设，相当于“如果”', '表示转折，相当于“却”'], answer: 1, explanation: '“可以做老师了”，事情或认识已经达到某种程度，“矣”常表示完成、变化或感叹。', cue: '把句末替换成“了”朗读，整句的完成感就出来了。' },
+      { word: '乎', type: '语境释义', prompt: '“孰知赋敛之毒有甚是蛇者乎”的“乎”是什么语气？', note: '整句是在发问，答案其实已经包含在前文。', passage: '孰知赋敛之毒有甚是蛇者<mark>乎</mark>？<span class="second-line">——柳宗元《捕蛇者说》</span>', options: ['表反问，相当于“吗、呢”', '表判断，相当于“是”', '表承接，相当于“于是”', '表时间，相当于“在”'], answer: 0, explanation: '“难道还有比这种蛇毒更厉害的赋税毒害吗？”“乎”帮助构成反问语气。', cue: '“孰知……乎”常可读成“谁知道……吗”，句末语气明显。' },
+      { word: '盖', type: '句意理解', prompt: '“盖竹柏影也”的“盖”在这里怎样翻译更顺？', note: '这是看到月下景物后的恍然确认。', passage: '庭下如积水空明，水中藻、荇交横，<mark>盖</mark>竹柏影也。<span class="second-line">——苏轼《记承天寺夜游》</span>', options: ['大概、原来是', '覆盖', '因为', '超过'], answer: 0, explanation: '月光下庭院像积水，水中交错的“藻荇”原来是竹柏的影子；“盖”带有推测、判断意味。', cue: '先写“像什么”，再揭示“其实是什么”，这里的“盖”接近“原来是”。' },
+      { word: '何', type: '句式辨析', prompt: '“何陋之有”中的“何”与整句怎样理解？', note: '注意“之”把宾语“何陋”提前了。', passage: '孔子云：<mark>何</mark>陋之有？<span class="second-line">——刘禹锡《陋室铭》</span>', options: ['有什么简陋的呢？“何”是“什么”', '为什么简陋呢？“何”是“为什么”', '哪里有简陋？“何”是“哪里”', '何时简陋？“何”是“什么时候”'], answer: 0, explanation: '“何陋之有”是宾语前置，应理解为“有何陋”，即“有什么简陋的呢”。', cue: '看到“何……之有”，优先尝试“有何……”，再翻译整句。' }
+    ];
+
+    const state = { index: 0, score: 0, answered: false, wrong: [], activeQuestions: questionBank.slice() };
+    const els = {
+      questionNumber: document.getElementById('questionNumber'), questionType: document.getElementById('questionType'), questionFocus: document.getElementById('questionFocus'), questionPrompt: document.getElementById('questionPrompt'), questionNote: document.getElementById('questionNote'), passage: document.getElementById('passage'), answerTip: document.getElementById('answerTip'), options: document.getElementById('options'), feedback: document.getElementById('feedback'), feedbackTitle: document.getElementById('feedbackTitle'), feedbackScore: document.getElementById('feedbackScore'), feedbackBody: document.getElementById('feedbackBody'), feedbackCue: document.getElementById('feedbackCue'), nextBtn: document.getElementById('nextBtn'), progressText: document.getElementById('progressText'), scoreText: document.getElementById('scoreText'), progressFill: document.getElementById('progressFill'), wordCloud: document.getElementById('wordCloud'), quizArea: document.getElementById('quizArea'), resultArea: document.getElementById('resultArea'), resultTitle: document.getElementById('resultTitle'), resultSummary: document.getElementById('resultSummary'), finalScore: document.getElementById('finalScore'), accuracy: document.getElementById('accuracy'), weakWord: document.getElementById('weakWord'), reviewBlock: document.getElementById('reviewBlock'), restartTop: document.getElementById('restartTop'), reviewTop: document.getElementById('reviewTop'), retryBtn: document.getElementById('retryBtn'), wrongOnlyBtn: document.getElementById('wrongOnlyBtn')
+    };
+
+    function renderWordCloud() {
+      els.wordCloud.innerHTML = questionBank.map((q, i) => `<span class="word-chip${i === state.index ? ' active' : ''}" data-word="${q.word}">${q.word}</span>`).join('');
+    }
+
+    function renderQuestion() {
+      const q = state.activeQuestions[state.index];
+      if (!q) return finishQuiz();
+      state.answered = false;
+      const total = state.activeQuestions.length;
+      els.questionNumber.textContent = `第${state.index + 1}题`;
+      els.questionType.textContent = q.type;
+      els.questionFocus.textContent = `虚词：${q.word}`;
+      els.questionPrompt.textContent = q.prompt;
+      els.questionNote.textContent = q.note;
+      els.passage.innerHTML = q.passage;
+      els.progressText.textContent = `第 ${state.index + 1} / ${total} 题`;
+      els.scoreText.textContent = `当前得分 ${state.score}`;
+      els.progressFill.style.width = `${(state.index / total) * 100}%`;
+      els.answerTip.textContent = q.type === '用法辨析' ? '先分别读两句，再判断虚词承担的语法关系。' : '读一读上下文，选择最贴合整句意思的一项。';
+      els.feedback.classList.remove('show');
+      els.feedbackTitle.classList.remove('is-wrong');
+      els.options.innerHTML = q.options.map((text, i) => `<button class="option" type="button" data-index="${i}"><span class="option-key">${String.fromCharCode(65 + i)}</span><span class="option-text">${text}</span></button>`).join('');
+      els.options.querySelectorAll('.option').forEach(btn => btn.addEventListener('click', () => answerQuestion(Number(btn.dataset.index))));
+      renderWordCloud();
+      window.__interactionState = { questionIndex: state.index, questionWord: q.word, answered: false, score: state.score, mode: state.activeQuestions.length === questionBank.length ? 'full' : 'wrong-only' };
+    }
+
+    function answerQuestion(choice) {
+      if (state.answered) return;
+      const q = state.activeQuestions[state.index];
+      state.answered = true;
+      const isCorrect = choice === q.answer;
+      if (isCorrect) state.score += 1;
+      else state.wrong.push({ q, choice });
+      els.options.querySelectorAll('.option').forEach((btn, i) => {
+        btn.disabled = true;
+        if (i === q.answer) btn.classList.add('correct');
+        if (i === choice && !isCorrect) btn.classList.add('wrong');
+      });
+      els.feedbackTitle.textContent = isCorrect ? '答对了：先读语境，再定用法。' : '先别急：回到句子里找线索。';
+      els.feedbackTitle.classList.toggle('is-wrong', !isCorrect);
+      els.feedbackScore.textContent = isCorrect ? '本题 +1 分' : `正确答案：${String.fromCharCode(65 + q.answer)}`;
+      els.feedbackBody.textContent = q.explanation;
+      els.feedbackCue.textContent = q.cue;
+      els.nextBtn.textContent = state.index === state.activeQuestions.length - 1 ? '查看本轮结果' : '下一题';
+      els.feedback.classList.add('show');
+      els.scoreText.textContent = `当前得分 ${state.score}`;
+      window.__interactionState = { questionIndex: state.index, questionWord: q.word, answered: true, selected: choice, correct: isCorrect, score: state.score, mode: state.activeQuestions.length === questionBank.length ? 'full' : 'wrong-only' };
+    }
+
+    function finishQuiz() {
+      els.quizArea.style.display = 'none';
+      els.resultArea.classList.add('show');
+      const total = state.activeQuestions.length;
+      const accuracy = total ? Math.round(state.score / total * 100) : 0;
+      els.finalScore.textContent = `${state.score}/${total}`;
+      els.accuracy.textContent = `${accuracy}%`;
+      const counts = {};
+      state.wrong.forEach(item => { counts[item.q.word] = (counts[item.q.word] || 0) + 1; });
+      const weak = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
+      els.weakWord.textContent = weak ? weak[0] : '保持状态';
+      els.resultTitle.textContent = accuracy >= 85 ? '语感渐稳，继续保持' : accuracy >= 60 ? '已经抓到不少语境线索' : '先从错题里的语境线索练起';
+      els.resultSummary.textContent = accuracy >= 85 ? '你已经能把虚词放回句子中判断了。复习时，继续关注“前后关系”和“句末语气”。' : '文言虚词没有固定的单一译法。把错题再读一遍，先说出分句关系，再记用法，会比孤立背诵更牢。';
+      if (state.wrong.length) {
+        els.reviewBlock.innerHTML = `<h3 style="margin:22px 0 0;color:var(--primary);">错题复盘（${state.wrong.length}题）</h3><div class="review-list">${state.wrong.map(item => `<div class="review-item"><strong>虚词“${item.q.word}” · ${item.q.type}</strong><p>${item.q.explanation}</p></div>`).join('')}</div>`;
+      } else {
+        els.reviewBlock.innerHTML = '<div class="review-item" style="border-left-color:var(--positive);"><strong>本轮没有错题</strong><p>你已经完成了18个虚词的语境练习，可以尝试带同伴说出每题的判断线索。</p></div>';
+      }
+      window.__interactionState = { screen: 'result', score: state.score, total, accuracy, wrongCount: state.wrong.length, weakWord: weak ? weak[0] : null };
+    }
+
+    function resetQuiz(list = questionBank.slice()) {
+      state.index = 0; state.score = 0; state.answered = false; state.wrong = []; state.activeQuestions = list;
+      els.quizArea.style.display = 'grid'; els.resultArea.classList.remove('show');
+      renderQuestion();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    els.nextBtn.addEventListener('click', () => { state.index += 1; renderQuestion(); });
+    els.restartTop.addEventListener('click', () => resetQuiz());
+    els.retryBtn.addEventListener('click', () => resetQuiz());
+    els.wrongOnlyBtn.addEventListener('click', () => {
+      const wrongQuestions = state.wrong.map(item => item.q);
+      if (wrongQuestions.length) resetQuiz(wrongQuestions); else resetQuiz();
+    });
+    els.reviewTop.addEventListener('click', () => {
+      if (state.wrong.length) { finishQuiz(); els.resultArea.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      else { els.feedbackBody.textContent = '当前还没有错题。完成几道练习后，这里会显示集中复盘入口。'; els.feedbackCue.textContent = '先完成答题，再回看最需要巩固的虚词。'; els.feedbackTitle.textContent = '错题复盘'; els.feedback.classList.add('show'); }
+    });
+
+    renderQuestion();
+  </script>
+<script src="https://static-nginx-online.fbcontent.cn/musk-workbench-web-static/editor/musk-html-editor.js?v=1.3.9"></script>
+
+</body></html>

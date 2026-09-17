@@ -1,0 +1,13 @@
+.DS_Store
+.ppt-build/
+output/
+建华/
+*.log
+.env
+.env.*
+# Original captured pages and unused upstream application scripts
+飞象老师校园版.html
+飞象老师校园版-我的.html
+飞象老师校园版_files/*.js
+飞象老师校园版-我的_files/*.js
+pelican-bicycle.html
