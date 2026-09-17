@@ -25,13 +25,12 @@ function readTurns(){
  try{const value=JSON.parse(localStorage.getItem(conversationKey)||'[]');return Array.isArray(value)?value.filter(t=>t&&typeof t.id==='string'&&typeof t.text==='string'&&people[t.author]&&Array.isArray(t.refs)):[];}catch{return [];}
 }
 function userMessage(text,attached,author){
- const message=el('div','wb-user-message');
- const label=el('div','wb-message-label');
- label.append(el('span','wb-sender-avatar',people[author].slice(0,1)),el('span','',people[author]+(author===currentUser?'（我）':'')));
- message.append(label);
+ const group=el('div','wb-user-group'),message=el('div','wb-user-message');
+ const label=el('div','wb-message-label',people[author]);
+ group.append(label,message);
  if(attached.length){const details=el('details','wb-sent-annotations');details.append(el('summary','',attached.length+' 条注释'));attached.forEach((ref,i)=>{const item=el('article','wb-sent-reference');item.append(el('small','','注释 '+(i+1)),el('blockquote','',ref.anchor?.quote||''),el('p','',ref.text));details.append(item);});message.append(details);}
  message.append(el('p','wb-message-text',text||'请按照这些注释修改课件。'));
- return message;
+ return group;
 }
 function seedConversation(){
  if(!chatContent)return;
