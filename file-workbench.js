@@ -1,7 +1,5 @@
 (()=>{
 const format=window.fileFormat,d=window.fileExamples[format];if(format==='html')return;
-const content=document.querySelector('.musk-chat-list-content');
-if(new URLSearchParams(location.search).get('from')!=='share'&&content){content.replaceChildren();const turn=document.createElement('section');turn.className='wb-chat-turn';const user=document.createElement('div');user.className='wb-user-message';user.textContent=d.prompt;const answer=document.createElement('div');answer.className='file-answer';const label=document.createElement('strong');label.textContent='已生成 '+d.label+' 文件';const summary=document.createElement('p');summary.textContent=d.summary;const card=document.createElement('button');card.className='file-output-card';card.innerHTML='<span class="file-type-icon"></span><span class="file-output-name"></span><span>查看 ↗</span>';card.querySelector('.file-type-icon').textContent=d.label;card.querySelector('.file-output-name').textContent=d.file;card.onclick=()=>{const viewer=document.querySelector('.attachmentViewerWrapper_u7vdf');if(viewer)viewer.hidden=false;document.querySelector('iframe[title="HTML Preview"]').focus();};answer.append(label,summary,card);turn.append(user,answer);content.append(turn);}
 const heading=document.querySelector('.title_GBaV6');if(heading)heading.textContent='文件预览 · '+d.label;
 const edit=document.getElementById('wb-edit');if(edit)edit.hidden=true;
 const title=[...document.querySelectorAll('div')].find(n=>n.childElementCount===0&&n.textContent==='生成初中文言文虚词教学动画');if(title)title.textContent=d.title;

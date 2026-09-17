@@ -17,21 +17,64 @@ if(!frame||!input||!container)return;
 const el=(tag,cls,text)=>{const n=document.createElement(tag);n.className=cls||'';if(text!==undefined)n.textContent=text;return n;};
 const chat=document.querySelector('.musk-chat-scroll-container');
 const chatContent=document.querySelector('.musk-chat-list-content');
-const fromShare=new URLSearchParams(location.search).get('from')==='share';
-if(fromShare&&chatContent){chatContent.replaceChildren();const empty=el('div','wb-chat-empty');empty.append(el('span','wb-empty-icon','✧'),el('h2','','一起完善这份课件'),el('p','',refs.length?'注释已带入输入框，你可以补充修改要求后发送。':'在下方输入修改要求，或在右侧课件中添加注释。'));chatContent.append(empty);}
+const conversationKey='feixiang-shared-conversation-v1-'+window.fileFormat;
+const people={owner:'杨金田',chen:'陈思远',li:'李文静',zhou:'周明'};
+const currentUser=people[document.body.dataset.currentUser]?document.body.dataset.currentUser:'owner';
+const updates=el('div','wb-shared-updates');
+function readTurns(){
+ try{const value=JSON.parse(localStorage.getItem(conversationKey)||'[]');return Array.isArray(value)?value.filter(t=>t&&typeof t.id==='string'&&typeof t.text==='string'&&people[t.author]&&Array.isArray(t.refs)):[];}catch{return [];}
+}
+function userMessage(text,attached,author){
+ const message=el('div','wb-user-message');
+ const label=el('div','wb-message-label');
+ label.append(el('span','wb-sender-avatar',people[author].slice(0,1)),el('span','',people[author]+(author===currentUser?'（我）':'')));
+ message.append(label);
+ if(attached.length){const details=el('details','wb-sent-annotations');details.append(el('summary','',attached.length+' 条注释'));attached.forEach((ref,i)=>{const item=el('article','wb-sent-reference');item.append(el('small','','注释 '+(i+1)),el('blockquote','',ref.anchor?.quote||''),el('p','',ref.text));details.append(item);});message.append(details);}
+ message.append(el('p','wb-message-text',text||'请按照这些注释修改课件。'));
+ return message;
+}
+function seedConversation(){
+ if(!chatContent)return;
+ const d=window.fileExamples[window.fileFormat],turn=el('section','wb-chat-turn');
+ turn.append(userMessage(d.prompt||'结合初中文言文常见的18个虚词，生成一个虚词互动知识问答，让学生在互动答题中培养文言文理解语感。',[],'owner'));
+ if(window.fileFormat!=='html'){
+  chatContent.replaceChildren();
+  const answer=el('div','file-answer'),card=el('button','file-output-card');card.type='button';
+  card.append(el('span','file-type-icon',d.label),el('span','file-output-name',d.file),el('span','','查看 ↗'));
+  card.onclick=()=>{const viewer=document.querySelector('.attachmentViewerWrapper_u7vdf');if(viewer)viewer.hidden=false;frame.focus();};
+  answer.append(el('strong','','已生成 '+d.label+' 文件'),el('p','',d.summary),card);turn.append(answer);
+ }
+ chatContent.prepend(turn);chatContent.append(updates);
+}
+function renderConversation(){
+ updates.replaceChildren();
+ for(const entry of readTurns()){
+  const turn=el('section','wb-chat-turn');turn.dataset.messageId=entry.id;
+  turn.append(userMessage(entry.text,entry.refs,entry.author));
+  const response=el('div','wb-ai-message'),body=el('div','wb-ai-status');
+  response.append(el('span','wb-ai-avatar','AI'),body);
+  body.append(el('strong','','暂时无法生成回复'),el('p','','尚未连接 AI 修改服务。修改要求已保留在对话中，课件未发生变更。'));
+  if(entry.author===currentUser){
+   const reuse=el('button','wb-reuse','重新编辑');reuse.type='button';
+   reuse.onclick=()=>{if(input.textContent.trim()||refs.length){status.textContent='请先发送或清空输入框中的内容，再重新编辑这条消息。';status.hidden=false;return;}input.textContent=entry.text;refs=structuredClone(entry.refs);persist();render();input.focus();};body.append(reuse);
+  }
+  turn.append(response);updates.append(turn);
+ }
+}
 function scrollChat(){requestAnimationFrame(()=>{if(chat)chat.scrollTop=chat.scrollHeight;});}
 function sendMessage(){
  if(send.disabled||!chatContent)return;
- chatContent.querySelector('.wb-chat-empty')?.remove();
- const text=input.textContent.trim(),attached=structuredClone(refs),turn=el('section','wb-chat-turn'),message=el('div','wb-user-message');
- message.append(el('div','wb-message-label','你'));
- if(attached.length){const details=el('details','wb-sent-annotations'),summary=el('summary','',`${attached.length} 条注释`);details.append(summary);attached.forEach((ref,i)=>{const item=el('article','wb-sent-reference');item.append(el('small','',`注释 ${i+1}`),el('blockquote','',ref.anchor.quote),el('p','',ref.text));details.append(item);});message.append(details);}
- message.append(el('p','wb-message-text',text||'请按照这些注释修改课件。'));turn.append(message);
- const response=el('div','wb-ai-message');response.setAttribute('role','status');response.append(el('span','wb-ai-avatar','AI'),el('div','wb-ai-status'));
- const body=response.lastChild;body.append(el('strong','','暂时无法生成回复'),el('p','','尚未连接 AI 修改服务。修改要求已展示在本次对话中，课件未发生变更。'));
- const reuse=el('button','wb-reuse','重新编辑');reuse.type='button';reuse.onclick=()=>{if(input.textContent.trim()||refs.length){status.textContent='请先发送或清空输入框中的内容，再重新编辑这条消息。';status.hidden=false;return;}input.textContent=text;refs=structuredClone(attached);persist();render();input.focus();};body.append(reuse);turn.append(response);chatContent.append(turn);
- input.replaceChildren();refs=[];persist();render();status.hidden=true;scrollChat();
+ const entry={id:crypto.randomUUID(),author:currentUser,text:input.textContent.trim(),refs:structuredClone(refs),createdAt:Date.now()};
+ try{const turns=readTurns();turns.push(entry);localStorage.setItem(conversationKey,JSON.stringify(turns));}
+ catch{status.textContent='消息未能保存，请稍后重试。';status.hidden=false;return;}
+ renderConversation();input.replaceChildren();refs=[];persist();render();status.hidden=true;scrollChat();
 }
+window.addEventListener('storage',event=>{
+ if(event.key!==conversationKey)return;
+ const atBottom=!chat||chat.scrollHeight-chat.scrollTop-chat.clientHeight<100;
+ renderConversation();if(atBottom)scrollChat();
+});
+seedConversation();renderConversation();
 const area=el('div','wb-annotations'),badge=el('button','wb-count'),popover=el('div','wb-popover');badge.type='button';badge.setAttribute('aria-expanded','false');popover.id='wb-annotation-preview';badge.setAttribute('aria-controls',popover.id);area.append(badge,popover);container.prepend(area);
 function persist(){try{sessionStorage.setItem(storeKey,JSON.stringify(refs));}catch{}}
 function render(){badge.textContent=`${refs.length} 条注释`;area.hidden=!refs.length;popover.replaceChildren();refs.forEach((ref,i)=>{const item=el('article','wb-reference'),head=el('div','wb-reference-head');head.append(el('strong','',`注释 ${i+1}`));const remove=el('button','','×');remove.type='button';remove.setAttribute('aria-label',`移除注释 ${i+1}`);remove.onclick=()=>{refs.splice(i,1);persist();render();};head.append(remove);item.append(head,el('blockquote','',ref.anchor.quote),el('p','',ref.text));popover.append(item);});updateSend();}
