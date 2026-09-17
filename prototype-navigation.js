@@ -1,0 +1,1 @@
+(()=>{document.querySelectorAll('button').forEach(b=>{const label=b.querySelector('[class*="navLabel"]')?.textContent.trim();if(label==='历史对话')b.onclick=()=>location.href='./history.html';if(label==='我的作品')b.onclick=()=>location.href='./works.html';});})();

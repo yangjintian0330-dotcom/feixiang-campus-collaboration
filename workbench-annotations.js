@@ -9,7 +9,7 @@ if(worksButton){
  worksButton.onclick=()=>{location.href='./works.html';};
 }
 
-const storeKey='feixiang-workbench-annotations-v1';
+const storeKey='feixiang-workbench-annotations-v1'+(window.fileFormat!=='html'?'-'+window.fileFormat:'');
 let refs=[];try{const saved=JSON.parse(sessionStorage.getItem(storeKey));if(Array.isArray(saved))refs=saved.filter(r=>r&&r.anchor&&typeof r.text==='string');}catch{}
 const frame=document.querySelector('iframe[title="HTML Preview"]');
 const input=document.querySelector('.editable-area');const container=document.querySelector('.editor-container');
@@ -51,6 +51,6 @@ if(editAction){
 
 if(action){action.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-9 9 10 10 0 0 1-4-.9L3 21l1.4-4.7A9 9 0 1 1 21 11.5Z"/><path d="M12 8v7m-3.5-3.5h7"/></svg>';action.setAttribute('aria-label','添加注释');action.title='添加注释';action.id='wb-add-annotation';action.onclick=()=>frame.contentWindow.postMessage({type:'fx-toggle-annotation'},location.origin);}
 window.addEventListener('message',e=>{if(e.origin!==location.origin||e.source!==frame.contentWindow)return;if(e.data?.type==='fx-annotation-state'){action?.setAttribute('aria-pressed',String(e.data.active));}if(e.data?.type==='fx-add-annotation'){const ref=e.data.reference;if(!ref||!ref.anchor||typeof ref.text!=='string')return;const existing=refs.findIndex(r=>r.id===ref.id);if(existing<0)refs.push(ref);else refs[existing]=ref;persist();render();input.focus();}});
-const surface=refs.at(-1)?.anchor.scope==='cover'||new URLSearchParams(location.search).get('surface')==='cover'?'cover':'quiz';frame.src=`share.html?embedded=1&surface=${surface}&v=19`;
+const surface=refs.at(-1)?.anchor.scope==='cover'||new URLSearchParams(location.search).get('surface')==='cover'?'cover':'quiz';frame.src=`share.html?embedded=1&surface=${window.fileFormat==='html'?surface:'cover'}&format=${window.fileFormat}&v=25`;
 render();if(refs.length){input.focus();requestAnimationFrame(()=>{const chat=document.querySelector('.musk-chat-scroll-container');if(chat)chat.scrollTop=chat.scrollHeight;});}
 })();

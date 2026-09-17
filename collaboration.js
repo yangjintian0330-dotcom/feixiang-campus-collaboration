@@ -1,6 +1,6 @@
 (() => {
 'use strict';
-const key='feixiang-collab-demo-v1';
+const key='feixiang-collab-demo-v1'+(window.fileFormat&&window.fileFormat!=='html'?'-'+window.fileFormat:'');
 const currentTeacherSubject='语文';
 const directory=[{id:'zhang',name:'张晓敏',discipline:'语文',subject:'语文 · 七年级'},{id:'li',name:'李文静',discipline:'语文',subject:'语文 · 八年级'},{id:'chen',name:'陈思远',discipline:'语文',subject:'语文 · 九年级'},{id:'wang',name:'王慧',discipline:'语文',subject:'语文 · 备课组长'},{id:'zhou',name:'周明',discipline:'数学',subject:'数学 · 七年级'},{id:'zhao',name:'赵欣',discipline:'英语',subject:'英语 · 八年级'}];
 const defaults={members:[],access:'school',linkRole:'view',download:true,copy:true};
@@ -71,7 +71,7 @@ $('co-add').onclick=()=>{
  save(`已添加 ${ids.length} 位协作成员`);selected.clear();$('co-search').value='';renderSelection();setPicker(false);render();
 };
 
-$('co-copy-link').onclick=async()=>{const url=new URL('share.html',location.href);$('co-linkbox').value=url.href;try{await navigator.clipboard.writeText(url.href);$('co-linkbox').hidden=true;feedback('');showToast('链接已复制');}catch{$('co-linkbox').hidden=false;$('co-linkbox').focus();$('co-linkbox').select();feedback('请手动复制下方示例链接');}};
+$('co-copy-link').onclick=async()=>{const url=new URL('share.html',location.href);if(window.fileFormat&&window.fileFormat!=='html')url.searchParams.set('format',window.fileFormat);$('co-linkbox').value=url.href;try{await navigator.clipboard.writeText(url.href);$('co-linkbox').hidden=true;feedback('');showToast('链接已复制');}catch{$('co-linkbox').hidden=false;$('co-linkbox').focus();$('co-linkbox').select();feedback('请手动复制下方示例链接');}};
 document.getElementById('collab-trigger').onclick=()=>{render();renderSelection();feedback('');$('co-linkbox').hidden=true;dlg.showModal();dlg.querySelector('.co-close').focus();};
 dlg.querySelector('.co-close').onclick=()=>dlg.close();dlg.addEventListener('click',e=>{if(e.target===dlg){const r=dlg.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dlg.close();}if(!e.target.closest('#co-picker'))setPicker(false,false);});
 dlg.addEventListener('close',()=>{setPicker(false,false);document.getElementById('collab-trigger').focus();});

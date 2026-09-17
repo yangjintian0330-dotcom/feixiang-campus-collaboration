@@ -1,10 +1,10 @@
 (() => {
 'use strict';
-const $=id=>document.getElementById(id), key='feixiang-course-comments-v1';
+const $=id=>document.getElementById(id), key='feixiang-course-comments-v1'+(window.fileFormat!=='html'?'-'+window.fileFormat:'');
 const people={owner:{name:'杨金田',role:'owner'},chen:{name:'陈思远',role:'edit'},li:{name:'李文静',role:'comment'},zhou:{name:'周明',role:'view'}};
 const user=Object.hasOwn(people,document.body.dataset.currentUser)?document.body.dataset.currentUser:'zhou';
 // Local page context; production must supply authenticated identity and enforce permissions on the server.
-function currentRole(){if(user==='owner')return 'owner';try{const config=JSON.parse(localStorage.getItem('feixiang-collab-demo-v1'));const member=config?.members?.find(m=>m.id===user);return ['comment','edit'].includes(member?.role)?member.role:'view';}catch{return 'view';}}
+function currentRole(){if(user==='owner')return 'owner';try{const config=JSON.parse(localStorage.getItem('feixiang-collab-demo-v1'+(window.fileFormat!=='html'?'-'+window.fileFormat:'')));const member=config?.members?.find(m=>m.id===user);return ['comment','edit'].includes(member?.role)?member.role:'view';}catch{return 'view';}}
 let floatingId=null;
 let mode=false, editMode=false, filter='open', threads=[], target=null, active=null, frameDoc=null, timer;
 try{const saved=JSON.parse(localStorage.getItem(key));if(Array.isArray(saved))threads=saved.filter(t=>t&&people[t.author]&&typeof t.text==='string'&&t.anchor&&Array.isArray(t.replies));}catch{}
@@ -93,7 +93,7 @@ $('composer').onsubmit=e=>{e.preventDefault();const text=$('comment-input').valu
 $('comment-input').oninput=()=>{const empty=!$('comment-input').value.trim();$('send').disabled=empty;};$('comment-input').onkeydown=e=>{if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)){e.preventDefault();$('composer').requestSubmit();}};
 $('cancel-comment').onclick=()=>{if(discard())cancel();};$('add-comment').onclick=()=>setMode(!(mode&&!editMode),'comment');$('edit-mode').onclick=()=>{if(canEdit())setMode(!editMode,'edit');};$('exit-mode').onclick=()=>setMode(false);
 $('threads-toggle').onclick=()=>{if(!$('panel').hidden){$('panel').hidden=true;position();}else openPanel();};$('close-panel').onclick=()=>{$('panel').hidden=true;position();};document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;render();});
-function applyPermissions(){if((editMode&&!canEdit())||(mode&&!canComment())){cancel();setMode(false);}$('edit-mode').hidden=!canEdit();$('add-comment').hidden=!canComment();$('threads-toggle').hidden=!canComment();if(!canComment())$('panel').hidden=true;if(!canEdit()){$('edit-chat').hidden=true;document.body.classList.remove('chat-open');}render();position();}
+function applyPermissions(){if((editMode&&!canEdit())||(mode&&!canComment())){cancel();setMode(false);}$('edit-mode').hidden=!canEdit()||window.fileFormat!=='html';$('add-comment').hidden=!canComment();$('threads-toggle').hidden=!canComment();if(!canComment())$('panel').hidden=true;if(!canEdit()){$('edit-chat').hidden=true;document.body.classList.remove('chat-open');}render();position();}
 $('start').onclick=()=>{$('lesson').hidden=true;$('quiz').hidden=false;cancel();position();};$('back-cover').onclick=()=>{if(!discard())return;cancel();$('lesson').hidden=false;$('quiz').hidden=true;position();};
 $('selection-comment').onclick=()=>{const n=target&&find(target);if(n&&canComment())openComposer(n);};
 $('cancel-selection').onclick=()=>{if(discard())cancel();};
@@ -110,7 +110,7 @@ function openEditChat(ref){
  if(!canEdit()||!discard())return;
  if(ref){
   if(window.parent!==window&&new URLSearchParams(location.search).has('embedded')){cancel();setMode(false);window.parent.postMessage({type:'fx-add-annotation',reference:ref},location.origin);return;}
-  try{const key='feixiang-workbench-annotations-v1';sessionStorage.setItem(key,JSON.stringify([ref]));location.href='./?annotations=1&from=share';}catch{toast('无法带入注释，请检查浏览器存储设置');}return;
+  try{const key='feixiang-workbench-annotations-v1'+(window.fileFormat!=='html'?'-'+window.fileFormat:'');sessionStorage.setItem(key,JSON.stringify([ref]));location.href='./?annotations=1&from=share&format='+window.fileFormat;}catch{toast('无法带入注释，请检查浏览器存储设置');}return;
  }
 cancel();setMode(false);
  if(ref&&!references.some(r=>r.id===ref.id))references.push(ref);
@@ -125,10 +125,10 @@ $('chat-input').onkeydown=e=>{if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)){e.prev
 $('chat-form').onsubmit=e=>{e.preventDefault();if(!canEdit()||$('chat-send').disabled)return;$('chat-error').textContent='尚未连接 AI 修改服务，课件未改动。引用内容和修改要求已保留。';$('chat-error').hidden=false;};
 // Reopen the personal draft by entering edit mode, without sharing the creator's chat history.
 $('edit-mode').onclick=()=>{if(!canEdit()||!discard())return;try{sessionStorage.setItem('feixiang-workbench-annotations-v1','[]');location.href='./?from=share&surface='+($('quiz').hidden?'cover':'quiz');}catch{toast('无法打开编辑对话，请检查浏览器存储设置');}};
-window.addEventListener('resize',position);$('canvas').addEventListener('scroll',position);window.addEventListener('storage',e=>{if(e.key==='feixiang-collab-demo-v1'){applyPermissions();return;}if(e.key!==key)return;try{const data=JSON.parse(e.newValue);if(Array.isArray(data)){threads=data;render();}}catch{}});applyPermissions();
+window.addEventListener('resize',position);$('canvas').addEventListener('scroll',position);window.addEventListener('storage',e=>{if(e.key==='feixiang-collab-demo-v1'+(window.fileFormat!=='html'?'-'+window.fileFormat:'')){applyPermissions();return;}if(e.key!==key)return;try{const data=JSON.parse(e.newValue);if(Array.isArray(data)){threads=data;render();}}catch{}});applyPermissions();
 if(new URLSearchParams(location.search).has('embedded')){
  document.body.classList.add('embedded-preview');
- if(new URLSearchParams(location.search).get('surface')==='quiz'){$('lesson').hidden=true;$('quiz').hidden=false;}
+ if(window.fileFormat==='html'&&new URLSearchParams(location.search).get('surface')==='quiz'){$('lesson').hidden=true;$('quiz').hidden=false;}
  window.addEventListener('message',e=>{if(e.origin===location.origin&&e.source===parent&&e.data?.type==='fx-toggle-annotation')setMode(!mode);});
 }
 })();
