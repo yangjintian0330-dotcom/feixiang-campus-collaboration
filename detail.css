@@ -31,3 +31,21 @@ body.detail-page{background:#f6f5f0;color:#27372f}
 .detail-page .canvas:fullscreen{background:#f3f0e8;overflow:auto;padding:32px}
 @media(max-width:1100px){.detail-page .paper{display:none}.detail-page .lesson{padding:0 24px}.detail-page #panel,.detail-page #detail-recommendations{flex-basis:280px;width:280px}.detail-footer{padding-right:324px}}
 @media(max-width:760px){.detail-page .site-head{padding:10px 14px;height:auto;min-height:64px;flex-wrap:wrap}.detail-page .tools{margin-left:auto}.detail-page .workspace,.detail-page.commenting .workspace{padding:0 12px;min-height:420px;height:calc(100dvh - 180px)}.detail-page #detail-recommendations{display:none}.detail-page #panel{position:fixed;top:112px;bottom:80px;right:12px;width:min(330px,calc(100vw - 24px));box-shadow:0 8px 28px #213e3025}.detail-footer{padding:14px 12px}.detail-author strong{font-size:10px}.detail-page .cover{padding:24px}.detail-heading h1{font-size:12px}}
+/* Keep collaboration controls together and restore the original resource actions. */
+.detail-page .site-head{padding-right:364px}
+.detail-page .tools{gap:8px}
+.detail-page #detail-fullscreen{position:static;float:none;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;flex:0 0 36px;margin:0;padding:8px;border:1px solid transparent;background:transparent;border-radius:8px;font-size:18px;color:#657166}
+.detail-page #detail-fullscreen:hover{background:#e9ece5}
+.detail-page #panel .panel-head{gap:10px;padding:14px 12px;border-bottom:1px solid #eef0e9}
+.detail-page #panel .panel-head h2{margin-right:auto}
+.detail-page #panel #add-comment{margin:0;gap:5px;height:30px;padding:5px 9px;border:1px solid #dce4d8;border-radius:6px;font-size:12px;color:#365c48;background:#f5f8f2}
+.detail-page #panel #add-comment[aria-pressed=true]{background:#e2ecdd;border-color:#b5c9ae}
+.detail-page #panel #add-comment svg{width:15px;height:15px}
+.detail-footer-actions{flex-shrink:0;align-items:center;gap:6px}
+.detail-footer-actions button{height:34px;min-width:78px;padding:6px 16px;border:1px solid #cccec6;border-radius:8px;background:transparent;color:#292f26;font-weight:500;white-space:nowrap}
+.detail-footer-actions #detail-favorite{min-width:60px;border-color:transparent;padding:6px 8px;font-weight:400}
+.detail-footer-actions #detail-share{background:#11130e;border-color:#11130e;color:#fff}
+.detail-footer-actions button:hover{background:#eaece4}
+.detail-footer-actions #detail-share:hover{background:#2b3227}
+@media(max-width:1100px){.detail-page .site-head{padding-right:324px}.detail-footer{flex-wrap:wrap}.detail-footer-actions{margin-left:auto}}
+@media(max-width:760px){.detail-page .site-head{padding-right:14px}.detail-footer{padding-right:12px}.detail-footer-actions button{min-width:60px;padding:6px 10px}}

@@ -3,10 +3,20 @@ const $=id=>document.getElementById(id),d=window.fileExamples[window.fileFormat]
 $('detail-title').textContent=d.title;document.title=d.title+' — 飞象老师';
 const toggle=$('threads-toggle');toggle.classList.add('detail-comments');
 const label=document.createElement('span');label.textContent='评论';toggle.insertBefore(label,$('count'));
-document.querySelector('.tools').append(toggle);
+const tools=document.querySelector('.tools');
+tools.append(toggle,$('detail-fullscreen'));
+const panelHead=document.querySelector('#panel .panel-head');
+panelHead.insertBefore($('add-comment'),$('close-panel'));
+$('add-comment').title='选择或框选课件内容，添加批注';
+const favoriteKey='feixiang-favorite-'+window.fileFormat;
+function renderFavorite(){let selected=false;try{selected=localStorage.getItem(favoriteKey)==='true';}catch{}$('detail-favorite').textContent=selected?'★ 已收藏':'☆ 收藏';$('detail-favorite').setAttribute('aria-pressed',String(selected));}
+renderFavorite();
+$('detail-favorite').onclick=()=>{try{localStorage.setItem(favoriteKey,String($('detail-favorite').getAttribute('aria-pressed')!=='true'));renderFavorite();}catch{notify('暂时无法保存收藏，请重试');}};
+$('detail-adapt').onclick=()=>notify('一键改编功能尚未接入，当前课件未改动');
 toggle.setAttribute('aria-controls','panel');
 const sync=()=>toggle.setAttribute('aria-expanded',String(!$('panel').hidden));
 new MutationObserver(sync).observe($('panel'),{attributes:true,attributeFilter:['hidden']});sync();
+$('detail-fullscreen').textContent='⛶';$('detail-fullscreen').title='全屏预览';
 $('detail-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('canvas').requestFullscreen();}catch{notify('暂时无法进入全屏，请重试');}};
 function notify(text){$('toast').textContent=text;$('toast').hidden=false;setTimeout(()=>$('toast').hidden=true,2400);}
 $('detail-share').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);notify('链接已复制');}catch{notify('请复制浏览器地址栏中的链接');}};
