@@ -49,3 +49,9 @@ body.detail-page{background:#f6f5f0;color:#27372f}
 .detail-footer-actions #detail-share:hover{background:#2b3227}
 @media(max-width:1100px){.detail-page .site-head{padding-right:324px}.detail-footer{flex-wrap:wrap}.detail-footer-actions{margin-left:auto}}
 @media(max-width:760px){.detail-page .site-head{padding-right:14px}.detail-footer{padding-right:12px}.detail-footer-actions button{min-width:60px;padding:6px 10px}}
+/* Standalone fullscreen uses the same toolbar and docked comment panel. */
+.detail-page.fullscreen-page .site-head{max-width:none;padding-right:24px}
+.detail-page.fullscreen-page:has(#panel:not([hidden])) .site-head{padding-right:364px}
+.detail-page.fullscreen-page .workspace,.detail-page.fullscreen-page.commenting .workspace{max-width:none;height:calc(100dvh - 80px)}
+@media(max-width:1100px){.detail-page.fullscreen-page:has(#panel:not([hidden])) .site-head{padding-right:324px}}
+@media(max-width:760px){.detail-page.fullscreen-page .site-head,.detail-page.fullscreen-page:has(#panel:not([hidden])) .site-head{padding-right:14px}.detail-page.fullscreen-page .workspace{height:calc(100dvh - 112px)}}
