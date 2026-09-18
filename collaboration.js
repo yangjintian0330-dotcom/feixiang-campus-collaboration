@@ -71,7 +71,7 @@ $('co-add').onclick=()=>{
  save(`已添加 ${ids.length} 位协作成员`);selected.clear();$('co-search').value='';renderSelection();setPicker(false);render();
 };
 
-$('co-copy-link').onclick=async()=>{const url=new URL('share.html',location.href);if(window.fileFormat&&window.fileFormat!=='html')url.searchParams.set('format',window.fileFormat);$('co-linkbox').value=url.href;try{await navigator.clipboard.writeText(url.href);$('co-linkbox').hidden=true;feedback('');showToast('链接已复制');}catch{$('co-linkbox').hidden=false;$('co-linkbox').focus();$('co-linkbox').select();feedback('请手动复制下方示例链接');}};
+$('co-copy-link').onclick=async()=>{const url=new URL('detail.html',location.href);if(window.fileFormat&&window.fileFormat!=='html')url.searchParams.set('format',window.fileFormat);$('co-linkbox').value=url.href;try{await navigator.clipboard.writeText(url.href);$('co-linkbox').hidden=true;feedback('');showToast('链接已复制');}catch{$('co-linkbox').hidden=false;$('co-linkbox').focus();$('co-linkbox').select();feedback('请手动复制下方示例链接');}};
 document.getElementById('collab-trigger').onclick=()=>{render();renderSelection();feedback('');$('co-linkbox').hidden=true;dlg.showModal();dlg.querySelector('.co-close').focus();};
 dlg.querySelector('.co-close').onclick=()=>dlg.close();dlg.addEventListener('click',e=>{if(e.target===dlg){const r=dlg.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dlg.close();}if(!e.target.closest('#co-picker'))setPicker(false,false);});
 dlg.addEventListener('close',()=>{setPicker(false,false);document.getElementById('collab-trigger').focus();});

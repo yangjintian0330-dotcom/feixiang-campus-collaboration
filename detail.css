@@ -1,0 +1,33 @@
+body.detail-page{background:#f6f5f0;color:#27372f}
+.detail-page .site-head{max-width:1540px;margin:auto;padding:0 24px;height:64px;gap:20px}
+.detail-heading{display:flex;align-items:center;gap:16px;min-width:0}
+.detail-back{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border:1px solid #e3e4dc;border-radius:8px;color:#566257;text-decoration:none;font-size:24px}
+.detail-heading h1{font:600 14px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;letter-spacing:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0}
+.detail-page .tools{flex-shrink:0;gap:10px;width:auto}
+.detail-page #add-comment{display:flex;align-items:center;gap:7px;width:auto;height:36px;padding:8px 12px;white-space:nowrap}
+.detail-page .comments-bubble{position:static;display:flex!important;align-items:center;gap:7px;width:auto;height:36px;border-radius:8px;padding:8px 13px;background:#fff;box-shadow:none;font-size:13px;color:#315a48}
+.detail-page .comments-bubble[hidden]{display:none!important}
+.detail-page .comments-bubble[aria-expanded=true]{background:#e5ede3;border-color:#b9cdb7}
+.detail-page .bubble-icon svg{width:17px;height:17px}
+.detail-page .comments-bubble #count{position:static;background:transparent;color:inherit;border:0;font-size:12px;min-width:0}
+.detail-page .workspace,.detail-page.commenting .workspace{max-width:1540px;margin:auto;display:flex;gap:20px;padding:0 24px;height:calc(100dvh - 144px);min-height:460px}
+.detail-page .canvas{border-radius:14px;min-width:0;background:#f3f0e8}
+.detail-page .lesson{margin:32px auto;padding:0 50px}
+.detail-page .cover{padding:42px 38px;gap:28px}
+.detail-page .cover h2{font-size:clamp(30px,3.1vw,46px)}
+.detail-page .paper{flex-basis:175px;height:260px}
+.detail-page #detail-fullscreen{position:sticky;float:right;right:12px;top:12px;z-index:5;padding:6px 10px;margin:12px 12px 0 0;background:#ffffffcc;color:#697369;font-size:11px;border:0}
+.detail-page #panel{position:static;flex:0 0 320px;width:320px;min-width:0;box-shadow:none;z-index:22;border-radius:12px}
+.detail-page #detail-recommendations{flex:0 0 320px;width:320px;overflow:auto}
+#detail-recommendations h2{font-size:14px;margin:4px 0 16px}
+.detail-recommendation{display:flex;gap:12px;margin-bottom:16px}
+.detail-recommendation img{width:128px;height:76px;object-fit:cover;border-radius:8px;background:#eceee7}
+.detail-recommendation p{font-size:13px;line-height:1.5;margin:0 0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.detail-recommendation small{font-size:11px;color:#939b8f}
+.detail-page .workspace:has(#panel:not([hidden])) #detail-recommendations{display:none}
+.detail-footer{max-width:1540px;margin:0 auto;min-height:80px;padding:14px 364px 14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.detail-author{display:flex;align-items:center;gap:10px}.detail-author strong{font-size:12px;font-weight:500}.detail-author small{display:block;color:#91988b;font-size:10px;margin-top:4px}
+.detail-footer-actions{display:flex;gap:8px}.detail-footer-actions button{min-width:75px;font-size:12px;padding:8px 16px}
+.detail-page .canvas:fullscreen{background:#f3f0e8;overflow:auto;padding:32px}
+@media(max-width:1100px){.detail-page .paper{display:none}.detail-page .lesson{padding:0 24px}.detail-page #panel,.detail-page #detail-recommendations{flex-basis:280px;width:280px}.detail-footer{padding-right:324px}}
+@media(max-width:760px){.detail-page .site-head{padding:10px 14px;height:auto;min-height:64px;flex-wrap:wrap}.detail-page .tools{margin-left:auto}.detail-page .workspace,.detail-page.commenting .workspace{padding:0 12px;min-height:420px;height:calc(100dvh - 180px)}.detail-page #detail-recommendations{display:none}.detail-page #panel{position:fixed;top:112px;bottom:80px;right:12px;width:min(330px,calc(100vw - 24px));box-shadow:0 8px 28px #213e3025}.detail-footer{padding:14px 12px}.detail-author strong{font-size:10px}.detail-page .cover{padding:24px}.detail-heading h1{font-size:12px}}
