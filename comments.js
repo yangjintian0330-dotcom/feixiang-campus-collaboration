@@ -127,7 +127,10 @@ $('chat-form').onsubmit=e=>{e.preventDefault();if(!canEdit()||$('chat-send').dis
 window.addEventListener('resize',position);$('canvas').addEventListener('scroll',position);window.addEventListener('storage',e=>{if(e.key==='feixiang-collab-demo-v1'+(window.fileFormat!=='html'?'-'+window.fileFormat:'')){applyPermissions();return;}if(e.key!==key)return;try{const data=JSON.parse(e.newValue);if(Array.isArray(data)){threads=data;render();}}catch{}});applyPermissions();
 if(new URLSearchParams(location.search).has('embedded')){
  document.body.classList.add('embedded-preview');
- if(window.fileFormat==='html'&&new URLSearchParams(location.search).get('surface')==='quiz'){$('lesson').hidden=true;$('quiz').hidden=false;}
+
  window.addEventListener('message',e=>{if(e.origin===location.origin&&e.source===parent&&e.data?.type==='fx-toggle-annotation')setMode(!mode);});
 }
+const route=new URLSearchParams(location.search);
+if(window.fileFormat==='html'&&route.get('surface')==='quiz'){$('lesson').hidden=true;$('quiz').hidden=false;}
+if(route.get('comments')==='1')openPanel();
 })();

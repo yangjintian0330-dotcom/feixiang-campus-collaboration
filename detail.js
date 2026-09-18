@@ -17,7 +17,13 @@ toggle.setAttribute('aria-controls','panel');
 const sync=()=>toggle.setAttribute('aria-expanded',String(!$('panel').hidden));
 new MutationObserver(sync).observe($('panel'),{attributes:true,attributeFilter:['hidden']});sync();
 $('detail-fullscreen').textContent='⛶';$('detail-fullscreen').title='全屏预览';
-$('detail-fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('canvas').requestFullscreen();}catch{notify('暂时无法进入全屏，请重试');}};
+$('detail-fullscreen').onclick=()=>{
+ const url=new URL('share.html',location.href);
+ url.searchParams.set('format',window.fileFormat);
+ url.searchParams.set('surface',$('quiz').hidden?'cover':'quiz');
+ if(!$('panel').hidden)url.searchParams.set('comments','1');
+ location.href=url.href;
+};
 function notify(text){$('toast').textContent=text;$('toast').hidden=false;setTimeout(()=>$('toast').hidden=true,2400);}
 $('detail-share').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);notify('链接已复制');}catch{notify('请复制浏览器地址栏中的链接');}};
 $('detail-download').onclick=()=>{
