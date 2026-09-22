@@ -75,4 +75,5 @@ $('co-copy-link').onclick=async()=>{const url=new URL('detail.html',location.hre
 document.getElementById('collab-trigger').onclick=()=>{render();renderSelection();feedback('');$('co-linkbox').hidden=true;dlg.showModal();dlg.querySelector('.co-close').focus();};
 dlg.querySelector('.co-close').onclick=()=>dlg.close();dlg.addEventListener('click',e=>{if(e.target===dlg){const r=dlg.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dlg.close();}if(!e.target.closest('#co-picker'))setPicker(false,false);});
 dlg.addEventListener('close',()=>{setPicker(false,false);document.getElementById('collab-trigger').focus();});
+if(location.hash==='#collaboration')requestAnimationFrame(()=>document.getElementById('collab-trigger').click());
 })();
