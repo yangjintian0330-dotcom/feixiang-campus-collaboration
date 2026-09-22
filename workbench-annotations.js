@@ -3,8 +3,6 @@
 const worksLabel=[...document.querySelectorAll('._navLabel_vupjn_57')].find(label=>label.textContent.trim()==='我的作品');
 const worksButton=worksLabel?.closest('button');
 if(worksButton){
- worksButton.classList.add('wb-works-entry');
- const hint=document.createElement('span');hint.className='wb-works-inline-hint';hint.textContent='← 点击查看';hint.setAttribute('aria-hidden','true');worksButton.append(hint);
  worksButton.title='点击我的作品，查看我的协作';
  worksButton.onclick=()=>{location.href='./works.html';};
 }
