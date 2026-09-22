@@ -52,27 +52,13 @@ function renderComment(){const t=threads.find(t=>t.id===floatingId);const card=$
 }
 function messageBlock(message,parent,isReply=false){
  const wrap=el('div','comment-message'),person=el('div','person');
- person.append(el('span','avatar',people[message.author].name[0]),el('strong','',people[message.author].name),el('small','',new Date(message.time).toLocaleDateString('zh-CN',{month:'numeric',day:'numeric'})+(message.editedAt?' · 已编辑':'')));
+ person.append(el('span','avatar',people[message.author].name[0]),el('strong','',people[message.author].name),el('small','',new Date(message.time).toLocaleDateString('zh-CN',{month:'numeric',day:'numeric'})));
  const content=el('p','message',message.text);wrap.append(person,content);
- if(message.author===user&&canComment()){
+ const canDelete=canComment()&&(message.author===user||user==='owner');
+ if(canDelete){
   const menu=el('details','comment-more'),toggle=el('summary','','•••'),actions=el('div','comment-menu');toggle.setAttribute('aria-label',isReply?'回复操作':'评论操作');menu.append(toggle,actions);menu.addEventListener('toggle',()=>{if(menu.open)document.querySelectorAll('.comment-more[open]').forEach(other=>{if(other!==menu)other.open=false;});});
-  actions.append(action('编辑',()=>{
-   if(!canComment()||message.author!==user)return;
-   menu.open=false;if(wrap.querySelector('.comment-edit-form'))return;
-   const form=el('form','comment-edit-form'),input=el('textarea'),buttons=el('div','comment-edit-actions');
-   input.value=message.text;input.maxLength=2000;input.setAttribute('aria-label',isReply?'编辑回复内容':'编辑评论内容');
-   const cancelEdit=action('取消',()=>{form.remove();content.hidden=false;menu.hidden=false;positionComment();});
-   const submit=el('button','primary','保存');submit.type='submit';input.oninput=()=>submit.disabled=!input.value.trim();
-   buttons.append(cancelEdit,submit);form.append(input,buttons);content.hidden=true;menu.hidden=true;wrap.append(form);
-   form.onsubmit=e=>{e.preventDefault();if(!canComment()||message.author!==user||!input.value.trim())return;
-    const previous=message.text,previousEdit=message.editedAt;message.text=input.value.trim();message.editedAt=Date.now();
-    if(!save()){message.text=previous;message.editedAt=previousEdit;return;}
-    render();toast('修改已保存');
-   };
-   input.onkeydown=e=>{if(e.key==='Escape'){e.preventDefault();cancelEdit.click();}else if(e.key==='Enter'&&(e.metaKey||e.ctrlKey)){e.preventDefault();form.requestSubmit();}};
-   positionComment();input.focus();input.setSelectionRange(input.value.length,input.value.length);
-  }),action('删除',()=>{
-   if(!canComment()||message.author!==user)return;
+  actions.append(action('删除',()=>{
+   if(!canDelete)return;
    menu.open=false;if(!confirm(isReply?'删除这条回复？':'删除这条评论？'))return;
    const before=structuredClone(threads);
    if(isReply)parent.replies=parent.replies.filter(r=>r.id!==message.id);else threads=threads.filter(t=>t.id!==parent.id);
