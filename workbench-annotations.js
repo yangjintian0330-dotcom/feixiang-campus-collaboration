@@ -50,14 +50,7 @@ function renderConversation(){
  for(const entry of readTurns()){
   const turn=el('section','wb-chat-turn');turn.dataset.messageId=entry.id;
   turn.append(userMessage(entry.text,entry.refs,entry.author));
-  const response=el('div','wb-ai-message'),body=el('div','wb-ai-status');
-  response.append(el('span','wb-ai-avatar','AI'),body);
-  body.append(el('strong','','暂时无法生成回复'),el('p','','尚未连接 AI 修改服务。修改要求已保留在对话中，课件未发生变更。'));
-  if(entry.author===currentUser){
-   const reuse=el('button','wb-reuse','重新编辑');reuse.type='button';
-   reuse.onclick=()=>{if(input.textContent.trim()||refs.length){status.textContent='请先发送或清空输入框中的内容，再重新编辑这条消息。';status.hidden=false;return;}input.textContent=entry.text;refs=structuredClone(entry.refs);persist();render();input.focus();};body.append(reuse);
-  }
-  turn.append(response);updates.append(turn);
+  updates.append(turn);
  }
 }
 function scrollChat(){requestAnimationFrame(()=>{if(chat)chat.scrollTop=chat.scrollHeight;});}
