@@ -10,10 +10,11 @@ if(fullscreen){
  const exit=document.createElement('button');exit.id='detail-fullscreen';document.querySelector('.tools').append(exit);
 }
 const d=window.fileExamples[window.fileFormat];$('detail-title').textContent=d.title;
-const toggle=$('threads-toggle'),label=document.createElement('span');label.textContent='评论';toggle.insertBefore(label,$('count'));
-document.querySelector('.tools').append(toggle,$('detail-fullscreen'));
-document.querySelector('#panel .panel-head').insertBefore($('add-comment'),$('close-panel'));
-$('add-comment').title='选择或框选课件内容，添加批注';
+const toggle=$('threads-toggle');
+document.querySelector('.tools').append($('add-comment'),$('detail-fullscreen'));
+$('canvas').append(toggle);
+$('add-comment').title='添加评论';
+$('add-comment').setAttribute('aria-label','添加评论');
 toggle.setAttribute('aria-controls','panel');
 const sync=()=>toggle.setAttribute('aria-expanded',String(!$('panel').hidden));
 new MutationObserver(sync).observe($('panel'),{attributes:true,attributeFilter:['hidden']});sync();

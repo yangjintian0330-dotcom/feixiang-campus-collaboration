@@ -4,12 +4,13 @@ body.detail-page{background:#f6f5f0;color:#27372f}
 .detail-back{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border:1px solid #e3e4dc;border-radius:8px;color:#566257;text-decoration:none;font-size:24px}
 .detail-heading h1{font:600 14px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;letter-spacing:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0}
 .detail-page .tools{flex-shrink:0;gap:10px;width:auto}
-.detail-page #add-comment{display:flex;align-items:center;gap:7px;width:auto;height:36px;padding:8px 12px;white-space:nowrap}
-.detail-page .comments-bubble{position:static;display:flex!important;align-items:center;gap:7px;width:auto;height:36px;border-radius:8px;padding:8px 13px;background:#fff;box-shadow:none;font-size:13px;color:#315a48}
+.detail-page #add-comment{display:flex;align-items:center;justify-content:center;width:36px;height:36px;padding:8px;white-space:nowrap}
+.detail-page #add-comment span{display:none}
+.detail-page .comments-bubble{position:absolute;display:block!important;right:20px;top:20px;width:46px;height:46px;border-radius:50%;padding:12px;background:#fff;box-shadow:0 4px 14px #25392a13;color:#315a48;z-index:20}
 .detail-page .comments-bubble[hidden]{display:none!important}
 .detail-page .comments-bubble[aria-expanded=true]{background:#e5ede3;border-color:#b9cdb7}
 .detail-page .bubble-icon svg{width:17px;height:17px}
-.detail-page .comments-bubble #count{position:static;background:transparent;color:inherit;border:0;font-size:12px;min-width:0}
+.detail-page .comments-bubble #count{position:absolute;right:-3px;top:-4px;background:#4c5650;color:#fff;border:2px solid #fff;border-radius:10px;font-size:10px;min-width:19px;line-height:15px}
 .detail-page .workspace,.detail-page.commenting .workspace{max-width:1540px;margin:auto;display:flex;gap:20px;padding:0 24px;height:calc(100dvh - 144px);min-height:460px}
 .detail-page .canvas{border-radius:14px;min-width:0;background:#f3f0e8}
 .detail-page .lesson{margin:32px auto;padding:0 50px}
@@ -38,9 +39,10 @@ body.detail-page{background:#f6f5f0;color:#27372f}
 .detail-page #detail-fullscreen:hover{background:#e9ece5}
 .detail-page #panel .panel-head{gap:10px;padding:14px 12px;border-bottom:1px solid #eef0e9}
 .detail-page #panel .panel-head h2{margin-right:auto}
-.detail-page #panel #add-comment{margin:0;gap:5px;height:30px;padding:5px 9px;border:1px solid #dce4d8;border-radius:6px;font-size:12px;color:#365c48;background:#f5f8f2}
-.detail-page #panel #add-comment[aria-pressed=true]{background:#e2ecdd;border-color:#b5c9ae}
-.detail-page #panel #add-comment svg{width:15px;height:15px}
+.detail-page .tools #add-comment{margin:0;border:1px solid transparent;border-radius:8px;color:#34463b;background:transparent}
+.detail-page .tools #add-comment:hover{background:#e5eade}
+.detail-page .tools #add-comment[aria-pressed=true]{background:#e2ecdd;border-color:#b5c9ae}
+.detail-page .tools #add-comment svg{width:20px;height:20px}
 .detail-footer-actions{flex-shrink:0;align-items:center;gap:6px}
 .detail-footer-actions button{height:34px;min-width:78px;padding:6px 16px;border:1px solid #cccec6;border-radius:8px;background:transparent;color:#292f26;font-weight:500;white-space:nowrap}
 .detail-footer-actions #detail-favorite{min-width:60px;border-color:transparent;padding:6px 8px;font-weight:400}
