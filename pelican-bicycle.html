@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鹈鹕的海边骑行</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f3e9;color:#334b49;font-family:Georgia,'Songti SC',serif;min-height:100vh;display:grid;place-items:center}main{width:min(1100px,100%);padding:38px 24px 24px}header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:0 2% 15px}.eyebrow{font:11px/1.5 Arial,sans-serif;letter-spacing:3px;color:#778881}h1{font-size:clamp(24px,4vw,38px);font-weight:400;margin:10px 0}header p{font-size:13px;color:#89948b}.scene{overflow:hidden;border-radius:50% 50% 16px 16px / 12% 12% 16px 16px;background:#e8eee2}svg{display:block;width:100%;height:auto}footer{display:flex;align-items:center;justify-content:space-between;padding:22px 2%;font-size:13px;color:#7d8c82}button{background:transparent;color:#425d53;border:1px solid #bbc5b6;border-radius:30px;padding:10px 19px;cursor:pointer;font:12px Arial,sans-serif}button:hover{background:#e8edde}button:focus-visible{outline:2px solid #d46f48;outline-offset:4px}.ink{stroke:#354b49;stroke-linecap:round;stroke-linejoin:round}.wave{fill:none;stroke:#9cbdad;stroke-width:2;stroke-linecap:round}@media(max-width:550px){main{padding:28px 12px}header p{display:none}footer{font-size:11px}}
+</style>
+</head>
+<body>
+<main>
+<header><div><div class="eyebrow">THE SLOW COAST · 01</div><h1>兜一圈，去看海。</h1></div><p>一只鹈鹕的悠闲午后</p></header>
+<div class="scene">
+<svg viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">鹈鹕骑自行车的二维动画</title><desc id="desc">戴着绿色帽子、系着红色围巾的鹈鹕，在海滨小路上踩着橘红色自行车，车轮旋转，海风轻拂。</desc>
+<defs>
+<pattern id="sand" width="110" height="70" patternUnits="userSpaceOnUse"><path d="M15 25h3m49 26h2m28-40h2" stroke="#d6c6a5" stroke-width="2" stroke-linecap="round"/></pattern>
+<g id="cloud" fill="#f7f6e9"><path d="M0 27C-4 12 16 4 27 12C33-7 63-3 66 14C84 3 102 14 100 27Z"/></g>
+<g id="wheel" class="ink"><circle r="94" fill="#f4ecd6" stroke-width="10"/><circle r="83" fill="#e5e6d0" stroke="#b6bca6" stroke-width="2"/><g stroke="#8e9f92" stroke-width="2"><path d="M-82 0H82M0-82V82M-58-58L58 58M-58 58L58-58M-76-31L76 31M-31-76L31 76M-76 31L76-31M-31 76L31-76"/></g><circle r="10" fill="#e1b978" stroke-width="3"/><path d="M-39-71A81 81 0 0 1 12-80" fill="none" stroke="#fff8e5" stroke-width="4"/></g>
+</defs>
+<path fill="#e8eee2" d="M0 0h1000v650H0z"/>
+<circle cx="778" cy="117" r="53" fill="#e9bd72"/>
+<g id="clouds"><use href="#cloud" x="105" y="108"/><use href="#cloud" x="475" y="68" transform="translate(130 0) scale(.8)"/><use href="#cloud" x="850" y="194"/></g>
+<path d="M0 307Q120 258 234 298T486 300T721 283T1000 301V450H0Z" fill="#c5d7c5"/>
+<path d="M0 327Q230 307 430 332T1000 318V469H0Z" fill="#bad2c3"/>
+<g class="wave"><path d="M40 357h79m39 32h47m529-41h73m40 41h88M330 356h36m233 45h65M10 414h54m808 21h96"/><path d="M768 257l7-35 15 35z" fill="#fbf2d9" stroke="none"/><path d="M775 220v44m-13-3h35l-8 7h-20z" stroke="#799b8c" fill="#799b8c"/></g>
+<path d="M0 455Q265 418 504 449T1000 436V650H0Z" fill="#e8dcbf"/>
+<path d="M0 473Q235 440 518 467T1000 457" fill="none" stroke="#f8efda" stroke-width="8"/>
+<path d="M0 557Q487 528 1000 552V650H0Z" fill="#dfcfac"/>
+<path d="M0 557Q487 528 1000 552V650H0Z" fill="url(#sand)"/>
+<g id="ground" stroke="#f8efda" stroke-width="4" stroke-linecap="round"><path d="M-160 587h100M80 587h100M320 587h100M560 587h100M800 587h100M1040 587h100M1280 587h100"/></g>
+<ellipse cx="502" cy="559" rx="270" ry="16" fill="#79856c" opacity=".14"/>
+<g id="rider">
+<!-- Rotating wheels, fixed bicycle geometry. -->
+<g transform="translate(323 455)"><g id="rearWheel"><use href="#wheel"/></g></g>
+<g transform="translate(681 455)"><g id="frontWheel"><use href="#wheel"/></g></g>
+<g class="ink" fill="none">
+<path d="M226 422A102 102 0 0 1 411 409M588 408A102 102 0 0 1 777 420" stroke="#ca744f" stroke-width="7"/>
+<path d="M323 455L407 318L486 455ZM407 318H620L486 455M620 318L681 455" stroke="#b4573e" stroke-width="13"/>
+<path d="M323 455L407 318L486 455ZM407 318H620L486 455M620 318L681 455" stroke="#db8056" stroke-width="7"/>
+<path d="M407 318l-13-34M620 318l-21-61q-4-13 10-17l37-7" stroke="#425b52" stroke-width="8"/>
+<path d="M631 234l25-6" stroke="#b7774e" stroke-width="12"/>
+<path d="M367 286q22-11 61-4" stroke="#354b49" stroke-width="14"/>
+<path d="M323 455h163" stroke="#52675c" stroke-width="3"/>
+<circle cx="486" cy="455" r="25" stroke="#52675c" stroke-width="5" fill="#eddbb5"/>
+</g>
+<g id="farLeg" class="ink" fill="none" stroke="#c18c47" stroke-width="12"><path id="farShin"/></g>
+<!-- Pelican silhouette: tail, round body, long neck and deep bill pouch. -->
+<g id="bird" class="ink" stroke-width="3">
+<path d="M373 253L297 228Q310 267 366 285" fill="#f5efdc"/>
+<path d="M377 268L316 257" fill="none" stroke="#c7cabb"/>
+<path d="M355 236C350 200 386 189 428 210C453 222 468 204 478 160C483 127 499 114 520 120C549 129 542 158 534 184C525 215 534 241 515 269C493 301 403 310 371 278Q358 262 355 236Z" fill="#faf6e7"/>
+<path d="M477 162Q467 203 449 221" fill="none" stroke="#d5d8c8" stroke-width="9"/>
+<path d="M381 229Q424 208 475 253Q447 289 407 270Q386 260 381 229Z" fill="#e0e4d5"/>
+<path d="M395 240q27 3 50 19m-37-10 21 15" fill="none" stroke="#aab8a9" stroke-width="2"/>
+<path d="M531 147L677 166Q634 205 576 206Q545 201 531 174Z" fill="#e6b55f"/>
+<path d="M531 147Q596 140 689 165L534 167Z" fill="#f2ca77"/>
+<path d="M546 179q38 22 81 5" fill="none" stroke="#ca9449" stroke-width="2"/>
+<circle cx="519" cy="145" r="5" fill="#354b49" stroke="none"/><circle cx="520" cy="143.5" r="1.5" fill="#fff" stroke="none"/>
+<path d="M489 126Q483 96 512 95Q538 96 539 119Z" fill="#6d8a6b"/>
+<path d="M480 124Q513 116 548 122" stroke="#425d4f" stroke-width="7" fill="none"/>
+<path d="M482 193q23 17 48 11l-3 13q-30 5-49-11Z" fill="#c9704d"/>
+<path id="scarf" d="M482 205Q449 188 420 206L433 219Q459 201 481 216Z" fill="#c9704d"/>
+<path d="M476 234Q521 260 548 251L628 235" fill="none" stroke="#354b49" stroke-width="17"/>
+<path d="M476 234Q521 260 548 251L628 235" fill="none" stroke="#f7f3e1" stroke-width="12"/>
+</g>
+<g class="ink" fill="none"><path id="nearShin" stroke="#dfaa58" stroke-width="13"/><path id="crank" stroke="#425b52" stroke-width="5"/><path id="nearFoot" stroke="#d99b4d" stroke-width="9"/><path id="farFoot" stroke="#bc8a48" stroke-width="8"/><path id="pedals" stroke="#354b49" stroke-width="6"/></g>
+<circle cx="486" cy="455" r="7" fill="#425b52"/>
+</g>
+<g fill="none" stroke="#8c9c78" stroke-width="3" stroke-linecap="round"><path d="M73 540q3-24-12-36m12 36q1-36 17-49m-17 49q13-20 26-20M896 520q-4-25-15-30m15 30q-2-37 11-47m-11 47q13-16 23-20"/></g>
+</svg>
+</div>
+<footer><span>海风刚好，慢一点也没关系。</span><button id="toggle" type="button" aria-pressed="false">Ⅱ 暂停动画</button></footer>
+</main>
+<script>
+const el=id=>document.getElementById(id);
+const motion=matchMedia('(prefers-reduced-motion: reduce)');
+let playing=!motion.matches,t=0,last=0;
+function render(){
+ const a=t*2.6,deg=a*180/Math.PI;
+ el('rearWheel').setAttribute('transform',`rotate(${deg})`);el('frontWheel').setAttribute('transform',`rotate(${deg})`);
+ el('rider').setAttribute('transform',`translate(0 ${Math.sin(a*2)*1.5})`);
+ const x=486+33*Math.cos(a),y=455+33*Math.sin(a),fx=972-x,fy=910-y;
+ el('nearShin').setAttribute('d',`M443 283 Q414 347 462 367 L${x} ${y}`);
+ el('farShin').setAttribute('d',`M457 283 Q512 335 511 369 L${fx} ${fy}`);
+ el('crank').setAttribute('d',`M${fx} ${fy}L${x} ${y}`);
+ el('nearFoot').setAttribute('d',`M${x-9} ${y-5}q12 0 23 3`);
+ el('farFoot').setAttribute('d',`M${fx-9} ${fy-5}q12 0 23 3`);
+ el('pedals').setAttribute('d',`M${x-13} ${y+3}h29M${fx-13} ${fy+3}h29`);
+ el('ground').setAttribute('transform',`translate(${-t*94%240} 0)`);
+ el('clouds').setAttribute('transform',`translate(${Math.sin(t*.09)*20} 0)`);
+ el('scarf').setAttribute('d',`M482 205Q449 ${188+Math.sin(a*2)*5} 420 ${206+Math.sin(a*2-1)*6}L433 219Q459 201 481 216Z`);
+}
+function updateButton(){el('toggle').textContent=playing?'Ⅱ 暂停动画':'▷ 播放动画';el('toggle').setAttribute('aria-pressed',String(!playing));}
+el('toggle').addEventListener('click',()=>{playing=!playing;updateButton()});
+motion.addEventListener('change',event=>{playing=!event.matches;updateButton()});
+function tick(now){if(last&&playing)t+=Math.min((now-last)/1000,.05);last=now;render();requestAnimationFrame(tick)}
+updateButton();requestAnimationFrame(tick);
+</script>
+</body>
+</html>

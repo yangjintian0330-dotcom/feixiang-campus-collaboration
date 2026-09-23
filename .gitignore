@@ -5,15 +5,3 @@ output/
 *.log
 .env
 .env.*
-# Original captured pages and unused upstream application scripts
-飞象老师校园版.html
-飞象老师校园版-我的.html
-飞象老师校园版_files/*.js
-飞象老师校园版-我的_files/*.js
-pelican-bicycle.html
-
-飞象老师校园版-历史对话.html
-飞象老师校园版-历史对话_files/
-
-文件详情页.html
-文件详情页_files/
